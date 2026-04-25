@@ -4,7 +4,7 @@ Personal portfolio site for **Pundalik Mhamal**, Senior Associate QA Engineer at
 
 iGaming · Automation · AI-assisted Testing · ISTQB Certified.
 
-🌐 **Live:** _coming soon_
+🌐 **Live:** [_Link_](https://iampundalikportfolio.netlify.app/)
 
 ## Stack
 
@@ -91,4 +91,4 @@ For Vercel/Netlify, point the project at this repo — they auto-detect Vite.
 
 ---
 
-Open to **Senior QA / SDET / Automation** roles.
+Open to **QA / SDET / Automation** roles.
