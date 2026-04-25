@@ -1,0 +1,190 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.loader__expand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  height: 60px;
+  margin: -30px 0 0 -120px;
+  background: var(--blue);
+  border-radius: 100px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.loader__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 6vw;
+  position: relative;
+  z-index: 2;
+}
+.loader__logo {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  color: var(--blue);
+  text-shadow: 0 0 30px rgba(0,212,255,0.4);
+}
+.loader__logo span { color: var(--green); }
+
+.loader__pong {
+  position: relative;
+  width: 130px;
+  height: 28px;
+  background: rgba(0,212,255,0.04);
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.loader__pong-grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+}
+.loader__pong-grid span {
+  border-right: 1px solid rgba(0,212,255,0.06);
+}
+.loader__pong-grid span:last-child { border-right: none; }
+.loader__pong-ball {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  background: var(--blue);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--blue);
+}
+
+.loader__marquee {
+  flex-shrink: 0;
+  padding: 1.4rem 0;
+  font-family: var(--display);
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: .06em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0,212,255,0.55);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 2;
+}
+.loader__marquee span { padding: 0 1.2rem; }
+.loader__diamond {
+  font-size: .7em;
+  color: var(--blue);
+  -webkit-text-stroke: 0;
+  text-shadow: 0 0 10px var(--blue);
+}
+
+.loader__stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.loader__btn {
+  position: relative;
+  width: min(420px, 80vw);
+  height: 70px;
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  background: rgba(8, 15, 24, 0.85);
+  backdrop-filter: blur(8px);
+  cursor: not-allowed;
+  overflow: hidden;
+  font-family: var(--mono);
+  color: var(--white);
+  letter-spacing: .12em;
+  transition: border-color .3s, box-shadow .3s, background .3s, color .3s;
+}
+.loader__btn:disabled { cursor: not-allowed; }
+.loader__btn--ready {
+  border-color: rgba(0,212,255,0.45);
+  box-shadow: 0 0 60px rgba(0,212,255,0.25);
+}
+.loader__btn--welcome {
+  cursor: pointer !important;
+  border-color: var(--blue);
+  background: var(--blue);
+  color: var(--bg);
+  box-shadow: 0 0 80px rgba(0,212,255,0.55);
+}
+.loader__btn-fill {
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  background: linear-gradient(90deg, rgba(0,212,255,0.12), rgba(0,255,157,0.10));
+  transition: width .25s ease-out;
+  z-index: 0;
+}
+.loader__btn--welcome .loader__btn-fill { display: none; }
+
+.loader__btn-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  font-size: .85rem;
+}
+.loader__btn-label { color: var(--dim2); }
+.loader__btn--ready .loader__btn-label { color: var(--blue); }
+.loader__btn-pct {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue);
+  min-width: 60px;
+  text-align: right;
+}
+.loader__btn-welcome {
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: .15em;
+  color: var(--bg);
+}
+
+.loader__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 6vw;
+  font-family: var(--mono);
+  font-size: .6rem;
+  color: var(--dim);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .loader__pong { display: none; }
+  .loader__header { padding: 1.2rem 5vw; }
+  .loader__bottom { font-size: .5rem; gap: .5rem; padding: 1.2rem 5vw; }
+  .loader__bottom span:nth-child(2) { display: none; }
+  .loader__btn { height: 60px; }
+  .loader__btn-pct { font-size: .95rem; min-width: 48px; }
+  .loader__marquee { font-size: clamp(1.6rem, 8vw, 2.4rem); padding: 1rem 0; }
+}

@@ -1,132 +1,94 @@
-# 👋 Hi, I’m Pundalik Mhamal
+# Pundalik Mhamal — QA Engineer Portfolio
 
-# 💼 QA / SDET Engineer | Manual & Automation Specialist | ISTQB Certified
+Personal portfolio site for **Pundalik Mhamal**, Senior Associate QA Engineer at Light & Wonder.
 
-Quality-driven QA Engineer with 3+ years of hands-on experience in Casino Game Testing and Web Application Testing.  
-Skilled in both **Manual Testing and Automation**, with strong expertise in defect analysis, test strategy creation, and quality ownership across SDLC.
+iGaming · Automation · AI-assisted Testing · ISTQB Certified.
 
-Experienced in ensuring production-grade releases through structured validation, risk analysis, and automation support.
+🌐 **Live:** _coming soon_
 
----
+## Stack
 
-# 🔎 Professional Summary
+- **Vite** + **React 19** + **TypeScript**
+- **Framer Motion** — micro-interactions, scroll reveals, parallax, page transitions
+- **react-fast-marquee** — scrolling tickers and gallery rows
+- **Lucide React** — icon set
+- Custom SVG mockups for QA dashboards, test reports, terminals, and AI anomaly detection
 
-I specialize in delivering high-quality, release-ready software by combining:
+No backend. Static site, deployable to any host (Vercel, Netlify, GitHub Pages, etc.).
 
-- Strong Manual Testing fundamentals
-- Automation mindset and scripting skills
-- Deep functional & system-level analysis
-- API and backend validation
-- Structured test documentation
-- Risk-based testing approach
+## Features
 
-I believe QA is not just bug detection — it is **quality engineering, system understanding, and proactive risk prevention.**
+- **Apple-style loader** — outlined marquee, percent-fill button, morphs into a full-screen welcome reveal
+- **Animated background** — canvas particles, ambient orbs, mouse-reactive
+- **Parallax scroll layers** — code blocks, terminals, and dashboards drift behind content at different speeds
+- **Custom cursor** — spring-tracked ring (auto-disabled on touch)
+- **Bento skills grid** — 10 expertise cards with mixed spans
+- **Experience timeline** — Light & Wonder + Claysys Technologies, accent-coded
+- **Tech stack** — 8 categories, 72+ tools (Playwright, Cypress, k6, Allure, Datadog, Argo CD, Terraform, OWASP ZAP, AI/LLM testing, etc.) with proficiency dots
+- **QA Lab gallery** — scrolling marquee of test reports, dashboards, browser sessions, terminals, and AI signal mockups
+- **Mobile-first responsive** — verified at 375px through desktop
 
----
+## Run locally
 
-# 🛠 Technical Skills
+```bash
+npm install
+npm run dev          # dev server with HMR (http://localhost:5173)
+npm run build        # type-check + production build → dist/
+npm run preview      # preview production build
+npm run lint         # eslint
+```
 
-## 🧪 Testing Expertise
-- Functional Testing
-- Regression Testing
-- System & Integration Testing
-- Game Testing (Casino / Slot Games)
-- API Testing (REST)
-- Exploratory Testing
-- Risk-Based Testing
-- Defect Lifecycle Management
-- Severity & Priority Evaluation
+## Project structure
 
----
+```
+src/
+├── App.tsx                    # composition + reveal animation
+├── main.tsx                   # entry
+├── index.css                  # design tokens + base styles
+├── App.css                    # section primitives, tags
+├── data/
+│   └── portfolio.ts           # all content (profile, skills, experience, stack, projects, certs)
+└── components/
+    ├── Loading.tsx            # apple-style loader screen
+    ├── Background.tsx         # animated canvas (orbs + particle web)
+    ├── ParallaxBg.tsx         # scroll-driven mockup layers
+    ├── Cursor.tsx             # custom cursor
+    ├── ScrollProgress.tsx     # top progress bar
+    ├── Nav.tsx                # sticky nav with mobile sheet
+    ├── Hero.tsx               # full name + intro + CTAs + metrics
+    ├── Marquee.tsx            # tools ticker
+    ├── Skills.tsx             # bento grid
+    ├── Experience.tsx         # work timeline
+    ├── Stack.tsx              # tech stack categories
+    ├── Projects.tsx           # featured projects with QA media
+    ├── QALab.tsx              # scrolling QA artefact gallery
+    ├── QAMockups.tsx          # SVG components (test report, browser, terminal, dashboard, AI)
+    ├── Certs.tsx              # certifications + education
+    ├── Contact.tsx            # email + socials
+    ├── Footer.tsx
+    ├── Reveal.tsx             # framer-motion in-view reveal helper
+    └── BrandIcons.tsx         # GitHub / LinkedIn icons
+```
 
-## 🤖 Automation & Technical Skills
-- Selenium WebDriver
-- Java (Automation scripting fundamentals)
-- Automation Framework Understanding (POM structure)
-- CI/CD Basics (Jenkins)
-- Git & Branching Strategy
-- Basic Debugging & Log Analysis
+## Deployment
 
----
+Any static host. For GitHub Pages with the `gh-pages` branch:
 
-## 📡 API & Backend Validation
-- Postman Collection Creation
-- Response Validation & Status Code Testing
-- JSON & XML Validation
-- XPath-based XML Query Validation
-- Data & Logic Verification for Game Events
+```bash
+npm run build
+# upload dist/ to your host of choice
+```
 
----
+For Vercel/Netlify, point the project at this repo — they auto-detect Vite.
 
-## 📋 Tools & Platforms
-- JIRA
-- TestRail
-- Postman
-- Jenkins
-- Azure DevOps
-- Confluence
-- GitHub
+## Contact
 
----
-
-# 🎰 Professional Experience
-
-## 🏢 Light & Wonder — QA Engineer
-
-### Key Contributions:
-
-- Validated GDK & Crucible Slot Games across multiple environments
-- Performed Base Game, Free Spin, Jackpot & Paytable validation
-- Implemented XPath-based XML validation for win logic verification
-- Reviewed and incorporated GLI issue learnings into regression strategy
-- Designed structured test cases with clear entry/exit criteria
-- Contributed to QA documentation restructuring for improved process clarity
-- Collaborated cross-functionally with Connect QA & LnW QA teams
-
----
-
-# 📂 QA Portfolio Work
-
-## 🧪 Manual Testing Artifacts
-- Sample Test Plan (Structured Format)
-- Detailed Test Case Documentation
-- Sample Defect Reports (JIRA format)
-- Priority vs Severity Mapping Examples
-- Risk-based Testing Scenarios
+- **Email** — pundalik.mhamal.work@gmail.com
+- **LinkedIn** — [linkedin.com/in/iampundalik](https://linkedin.com/in/iampundalik)
+- **GitHub** — [github.com/Iampundalik](https://github.com/Iampundalik)
+- **Phone** — +91 98907 03905
+- **Location** — Goa, India · Remote / Hybrid / Open to relocation
 
 ---
 
-## 🌐 API Testing
-- Sample Postman Collection
-- API Test Case Design
-- Response Schema Validation
-- Negative Testing Examples
-
----
-
-## 🤖 Automation Projects
-- Selenium Automation Sample Repository
-- Framework Structure Overview
-- CI Execution Overview
-- Automation Strategy Notes
-
----
-
-# 📈 Continuous Learning & Growth
-
-- ISTQB Certified
-- Expanding automation depth & debugging expertise
-- Strengthening system-level thinking for Core QA responsibilities
-- Focused on improving defect prevention strategies and release quality metrics
-
----
-
-# 📫 Connect With Me
-
-📧 Email: pundalik.mhamal.work@gmail.com  
-🔗 GitHub: https://github.com/Iampundalik  
-🔗 LinkedIn: https://www.linkedin.com/in/iampundalik/
-
----
-
-⭐ Always open to collaborating on QA improvements, automation strategy, and quality engineering discussions.
+Open to **Senior QA / SDET / Automation** roles.

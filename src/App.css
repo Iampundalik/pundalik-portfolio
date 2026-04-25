@@ -1,0 +1,87 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 8rem 6vw;
+}
+.section.alt { background: var(--bg2); }
+
+@media (max-width: 720px) {
+  .section { padding: 4.5rem 5vw; }
+  .sec-sub { font-size: .9rem; line-height: 1.7; }
+  .sec-h { font-size: clamp(2rem, 11vw, 3rem); }
+}
+@media (max-width: 380px) {
+  .section { padding: 4rem 4vw; }
+}
+
+.sec-label {
+  font-family: var(--mono);
+  font-size: .65rem;
+  color: var(--blue);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+.sec-label::before { content: '//'; color: var(--green); }
+
+.sec-h {
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: .04em;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: .92;
+}
+.sec-h .d {
+  -webkit-text-stroke: 1px rgba(255,255,255,.18);
+  color: transparent;
+}
+
+.sec-sub {
+  font-size: .95rem;
+  color: var(--dim2);
+  margin-top: 1rem;
+  line-height: 1.85;
+  max-width: 520px;
+  font-weight: 500;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border2), transparent);
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: .6rem;
+  letter-spacing: .04em;
+  padding: .25rem .65rem;
+  border-radius: 3px;
+  border: 1px solid;
+  transition: all .2s;
+  cursor: default;
+  white-space: nowrap;
+  display: inline-block;
+}
+.tag.b { background: rgba(0,212,255,.06); border-color: rgba(0,212,255,.2); color: var(--blue); }
+.tag.g { background: rgba(0,255,157,.06); border-color: rgba(0,255,157,.2); color: var(--green); }
+.tag.o { background: rgba(255,107,53,.06); border-color: rgba(255,107,53,.2); color: var(--orange); }
+.tag.w { background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.09); color: var(--dim2); }
+.tag:hover { filter: brightness(1.3); transform: scale(1.04); }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .7rem;
+}
