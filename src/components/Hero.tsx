@@ -73,7 +73,7 @@ export function Hero() {
           <strong>3+ years</strong> engineering quality at scale.
           Playwright, Selenium, API testing, CI/CD pipelines — with hands-on knowledge in{' '}
           <strong>AI-assisted testing</strong>, <strong>Kubernetes</strong>, <strong>networking</strong>, and <strong>DSA</strong>.
-          ISTQB Certified. GLI compliant. Promotion-proven at Light &amp; Wonder.
+          ISTQB Certified. GLI compliant.
         </motion.p>
 
         <motion.div
