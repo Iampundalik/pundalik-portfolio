@@ -10,7 +10,7 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/iampundalik',
   location: 'Goa, India · Remote / Hybrid / Open to Relocation',
   summary:
-    '3+ years engineering quality at scale. Playwright, Selenium, API testing, CI/CD pipelines — with hands-on knowledge in AI-assisted testing, Kubernetes, networking, and DSA. ISTQB Certified. GLI compliant. Promotion-proven at Light & Wonder.',
+    '3+ years engineering quality at scale. Playwright, Selenium, API testing, CI/CD pipelines — with hands-on knowledge in AI-assisted testing, Kubernetes, networking, and DSA. ISTQB Certified. GLI compliant.',
 };
 
 export const metrics = [
@@ -113,9 +113,9 @@ export const skills: SkillCard[] = [
   {
     icon: 'dice',
     title: 'IGAMING DOMAIN',
-    desc: 'Casino slot QA — RNG, paytables, free spins, jackpots. GLI standards. GDK / Crucible multi-provider expertise.',
+    desc: 'Casino slot QA — RNG, paytables, free spins, jackpots. GLI standards. GDM / GDK multi-provider expertise.',
     tags: [
-      { label: 'GDK / Crucible', tone: 'o' }, { label: 'GLI', tone: 'o' },
+      { label: 'GDM / GDK', tone: 'o' }, { label: 'GLI', tone: 'o' },
       { label: 'Slots', tone: 'o' },
     ],
     span: 4,
