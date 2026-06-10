@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { GithubIcon } from './BrandIcons';
 import { Reveal } from './Reveal';
+import { SectionHead } from './SectionHead';
+import { Tilt } from './Tilt';
 import { projects } from '../data/portfolio';
 import { QAImage } from './QAMockups';
 import './Projects.css';
@@ -9,15 +11,17 @@ import './Projects.css';
 export function Projects() {
   return (
     <section className="section alt" id="projects">
-      <Reveal>
-        <div className="sec-label">04 PROJECTS</div>
-        <h2 className="sec-h">THINGS<br /><span className="d">BUILT</span></h2>
-        <p className="sec-sub">Hands-on automation frameworks, scrapers and AI experiments.</p>
-      </Reveal>
+      <SectionHead
+        label="04 PROJECTS"
+        line1="THINGS"
+        line2="BUILT"
+        sub="Hands-on automation frameworks, scrapers and AI experiments."
+      />
 
       <div className="proj">
         {projects.map((p, i) => (
           <Reveal key={p.name} delay={(i % 2) * 0.1}>
+            <Tilt className="tilt">
             <motion.article
               className="proj__card"
               whileHover={{ y: -6 }}
@@ -42,6 +46,7 @@ export function Projects() {
                 </div>
               </div>
             </motion.article>
+            </Tilt>
           </Reveal>
         ))}
       </div>

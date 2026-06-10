@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Award, ShieldCheck, Workflow, Code2, GraduationCap, Cpu } from 'lucide-react';
 import { Reveal } from './Reveal';
+import { SectionHead } from './SectionHead';
 import { certs } from '../data/portfolio';
 import './Certs.css';
 
@@ -9,10 +10,7 @@ const ICONS = [Award, ShieldCheck, Workflow, Code2, GraduationCap, Cpu];
 export function Certs() {
   return (
     <section className="section" id="certs">
-      <Reveal>
-        <div className="sec-label">06 CREDENTIALS</div>
-        <h2 className="sec-h">CERTS &amp;<br /><span className="d">EDUCATION</span></h2>
-      </Reveal>
+      <SectionHead label="06 CREDENTIALS" line1="CERTS &" line2="EDUCATION" />
 
       <div className="certs">
         {certs.map((c, i) => {

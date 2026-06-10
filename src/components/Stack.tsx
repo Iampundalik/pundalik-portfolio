@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Reveal } from './Reveal';
+import { SectionHead } from './SectionHead';
 import { stack } from '../data/portfolio';
 import './Stack.css';
 
@@ -8,10 +9,13 @@ const LEVEL_LABEL: Record<string, string> = { e: 'Expert', p: 'Proficient', l: '
 export function Stack() {
   return (
     <section className="section" id="stack">
-      <Reveal>
-        <div className="sec-label">03 TECHNOLOGIES</div>
-        <h2 className="sec-h">TECH<br /><span className="d">STACK</span></h2>
-        <p className="sec-sub">Tools I work with daily.</p>
+      <SectionHead
+        label="03 TECHNOLOGIES"
+        line1="TECH"
+        line2="STACK"
+        sub="Tools I work with daily."
+      />
+      <Reveal delay={0.3}>
         <div className="stack__legend">
           {(['e', 'p', 'l'] as const).map(k => (
             <span key={k} className="stack__legend-item">

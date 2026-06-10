@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import MarqueePkg from 'react-fast-marquee';
-import { Reveal } from './Reveal';
+import { SectionHead } from './SectionHead';
 
 const Marquee = ((MarqueePkg as unknown as { default?: typeof MarqueePkg }).default ?? MarqueePkg) as typeof MarqueePkg;
 import { MockTestReport, MockBrowser, MockTerminal, MockDashboard, MockAI } from './QAMockups';
@@ -46,11 +46,12 @@ export function QALab() {
 
   return (
     <section className="section" id="gallery" ref={ref}>
-      <Reveal>
-        <div className="sec-label">05 QA LAB</div>
-        <h2 className="sec-h">EVIDENCE,<br /><span className="d">SHIPPED</span></h2>
-        <p className="sec-sub">A snapshot of the artefacts I work with daily — test reports, automation runs, dashboards, AI-assisted analysis.</p>
-      </Reveal>
+      <SectionHead
+        label="05 QA LAB"
+        line1="EVIDENCE,"
+        line2="SHIPPED"
+        sub="A snapshot of the artefacts I work with daily — test reports, automation runs, dashboards, AI-assisted analysis."
+      />
 
       <div className="lab__rows">
         <Marquee speed={30} gradient gradientColor="#020408" gradientWidth={120} pauseOnHover>

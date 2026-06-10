@@ -3,6 +3,8 @@ import {
   FlaskConical, Theater, Bot, Zap, Brain, Cloud, Dices, Network, Rocket, Hash,
 } from 'lucide-react';
 import { Reveal } from './Reveal';
+import { SectionHead } from './SectionHead';
+import { Tilt } from './Tilt';
 import { skills } from '../data/portfolio';
 import './Skills.css';
 
@@ -22,11 +24,12 @@ const ICONS: Record<string, React.ComponentType<{ size?: number; strokeWidth?: n
 export function Skills() {
   return (
     <section className="section" id="skills">
-      <Reveal>
-        <div className="sec-label">01 EXPERTISE</div>
-        <h2 className="sec-h">WHAT I<br /><span className="d">KNOW</span></h2>
-        <p className="sec-sub">Full spectrum quality engineering — strategy, execution, automation, AI-augmented testing.</p>
-      </Reveal>
+      <SectionHead
+        label="01 EXPERTISE"
+        line1="WHAT I"
+        line2="KNOW"
+        sub="Full spectrum quality engineering — strategy, execution, automation, AI-augmented testing."
+      />
 
       <div className="skills">
         {skills.map((s, i) => {
@@ -34,6 +37,7 @@ export function Skills() {
           const isCount = s.icon === 'count';
           return (
             <Reveal key={i} delay={(i % 3) * 0.08} className={`skill-cell skill--c${s.span}`}>
+              <Tilt className="tilt">
               <motion.div
                 className="skill"
                 whileHover={{ y: -4, borderColor: 'rgba(0,212,255,0.35)' }}
@@ -62,6 +66,7 @@ export function Skills() {
                   ))}
                 </div>
               </motion.div>
+              </Tilt>
             </Reveal>
           );
         })}

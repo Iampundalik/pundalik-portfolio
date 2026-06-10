@@ -45,6 +45,20 @@
   color: transparent;
 }
 
+.sh-line {
+  display: block;
+  overflow: hidden;
+}
+.sh-char {
+  display: inline-block;
+  will-change: transform;
+  transform-origin: bottom center;
+}
+
+.tilt {
+  height: 100%;
+}
+
 .sec-sub {
   font-size: .95rem;
   color: var(--dim2);

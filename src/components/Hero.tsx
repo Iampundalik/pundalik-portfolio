@@ -1,6 +1,8 @@
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { ArrowRight, ExternalLink, ChevronDown } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
+import { Magnetic } from './Magnetic';
+import { ScrambleText } from './ScrambleText';
 import { useRef } from 'react';
 import { profile, metrics } from '../data/portfolio';
 import './Hero.css';
@@ -45,7 +47,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1, delay: 0.25, ease: [0.23, 1, 0.32, 1] }}
           >
-            {fullName}
+            <ScrambleText text={fullName} duration={1200} delay={350} />
           </motion.span>
         </h1>
 
@@ -83,15 +85,21 @@ export function Hero() {
           animate="visible"
           custom={0.85}
         >
-          <a href={`mailto:${profile.email}`} className="btn btn--primary">
-            GET IN TOUCH <ArrowRight size={14} strokeWidth={2.5} />
-          </a>
-          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
-            <LinkedinIcon size={14} /> LINKEDIN <ExternalLink size={12} />
-          </a>
-          <a href={profile.github} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
-            <GithubIcon size={14} /> GITHUB <ExternalLink size={12} />
-          </a>
+          <Magnetic>
+            <a href={`mailto:${profile.email}`} className="btn btn--primary">
+              GET IN TOUCH <ArrowRight size={14} strokeWidth={2.5} />
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
+              <LinkedinIcon size={14} /> LINKEDIN <ExternalLink size={12} />
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
+              <GithubIcon size={14} /> GITHUB <ExternalLink size={12} />
+            </a>
+          </Magnetic>
         </motion.div>
 
         <motion.div
@@ -111,7 +119,9 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               style={{ transitionDelay: `${1 + i * 0.05}s` }}
             >
-              <div className="hero__metric-v">{m.v}</div>
+              <div className="hero__metric-v">
+                <ScrambleText text={m.v} duration={650} delay={1100 + i * 140} />
+              </div>
               <div className="hero__metric-l">{m.l}</div>
             </motion.div>
           ))}

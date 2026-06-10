@@ -24,7 +24,8 @@
   --display: 'Orbitron', sans-serif;
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+/* position:relative lets framer-motion's useScroll measure target offsets cleanly */
+html { scroll-behavior: smooth; font-size: 16px; position: relative; }
 body {
   background: var(--bg);
   color: var(--white);

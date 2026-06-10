@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
 import { Reveal } from './Reveal';
+import { SectionHead } from './SectionHead';
+import { Magnetic } from './Magnetic';
 import { profile } from '../data/portfolio';
 import './Contact.css';
 
@@ -9,12 +11,13 @@ export function Contact() {
   return (
     <section className="section alt" id="contact">
       <div className="contact__wrap">
-        <Reveal>
-          <div className="sec-label" style={{ justifyContent: 'center' }}>07 CONTACT</div>
-          <h2 className="sec-h" style={{ textAlign: 'center', fontSize: 'clamp(2.8rem, 8vw, 7rem)' }}>
-            LET'S<br /><span className="d">TALK</span>
-          </h2>
-        </Reveal>
+        <SectionHead
+          label="07 CONTACT"
+          line1="LET'S"
+          line2="TALK"
+          center
+          h2Style={{ textAlign: 'center', fontSize: 'clamp(2.8rem, 8vw, 7rem)' }}
+        />
 
         <Reveal delay={0.1}>
           <motion.div
@@ -31,9 +34,11 @@ export function Contact() {
               Senior Associate QA Engineer with full-stack testing expertise. iGaming domain.
               Automation-first. Remote, hybrid, or relocation.
             </p>
-            <a href={`mailto:${profile.email}`} className="contact__email">
-              <Mail size={20} /> {profile.email}
-            </a>
+            <Magnetic strength={0.15}>
+              <a href={`mailto:${profile.email}`} className="contact__email">
+                <Mail size={20} /> {profile.email}
+              </a>
+            </Magnetic>
             <div className="contact__links">
               <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="contact__link">
                 <LinkedinIcon size={16} /> LinkedIn

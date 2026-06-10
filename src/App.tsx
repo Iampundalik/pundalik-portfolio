@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { BackToTop } from './components/BackToTop';
 import './App.css';
 import { Background } from './components/Background';
 import { ParallaxBg } from './components/ParallaxBg';
@@ -17,6 +18,20 @@ import { QALab } from './components/QALab';
 import { Certs } from './components/Certs';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+
+function Divider() {
+  const reduce = useReducedMotion();
+  return (
+    <motion.div
+      className="divider"
+      initial={reduce ? false : { scaleX: 0 }}
+      whileInView={{ scaleX: 1 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 1.1, ease: [0.23, 1, 0.32, 1] }}
+      style={{ transformOrigin: 'left center' }}
+    />
+  );
+}
 
 function App() {
   const skipLoader = typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('still');
@@ -52,26 +67,27 @@ function App() {
             initial={reduce ? false : { opacity: 0, scale: 0.96, filter: 'blur(8px)' }}
             animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1] }}
-            style={{ transformOrigin: 'center center' }}
+            style={{ transformOrigin: 'center center', position: 'relative' }}
           >
             <Nav />
             <main>
               <Hero />
               <Ticker />
               <Skills />
-              <div className="divider" />
+              <Divider />
               <Experience />
-              <div className="divider" />
+              <Divider />
               <Stack />
-              <div className="divider" />
+              <Divider />
               <Projects />
-              <div className="divider" />
+              <Divider />
               <QALab />
-              <div className="divider" />
+              <Divider />
               <Certs />
               <Contact />
             </main>
             <Footer />
+            <BackToTop />
           </motion.div>
         )}
       </AnimatePresence>

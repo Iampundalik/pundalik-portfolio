@@ -1,17 +1,20 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ChevronRight, Circle, ArrowUpRight } from 'lucide-react';
 import { Reveal } from './Reveal';
+import { SectionHead } from './SectionHead';
 import { experience } from '../data/portfolio';
 import './Experience.css';
 
 export function Experience() {
+  const reduce = useReducedMotion();
   return (
     <section className="section alt" id="experience">
-      <Reveal>
-        <div className="sec-label">02 EXPERIENCE</div>
-        <h2 className="sec-h">WORK<br /><span className="d">HISTORY</span></h2>
-        <p className="sec-sub">Promoted at a global iGaming leader. 3 years across casino games and enterprise RPA.</p>
-      </Reveal>
+      <SectionHead
+        label="02 EXPERIENCE"
+        line1="WORK"
+        line2="HISTORY"
+        sub="Promoted at a global iGaming leader. 3 years across casino games and enterprise RPA."
+      />
 
       <div className="exp">
         {experience.map((e, i) => (
@@ -44,10 +47,16 @@ export function Experience() {
               <p className="exp__role">// {e.role}</p>
               <ul className="exp__list">
                 {e.bullets.map((b, k) => (
-                  <li key={k}>
+                  <motion.li
+                    key={k}
+                    initial={reduce ? false : { opacity: 0, x: -14 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: '-30px' }}
+                    transition={{ duration: 0.45, delay: k * 0.06, ease: [0.23, 1, 0.32, 1] }}
+                  >
                     <ChevronRight size={12} strokeWidth={2.5} className="exp__chev" />
                     <span>{b}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
               <div className={`exp__foot exp__foot--${e.footTone}`}>{e.foot}</div>

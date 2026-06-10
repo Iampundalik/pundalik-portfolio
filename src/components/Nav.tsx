@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Magnetic } from './Magnetic';
 import { navLinks, profile } from '../data/portfolio';
 import './Nav.css';
 
@@ -48,9 +49,11 @@ export function Nav() {
           ))}
         </ul>
 
-        <a href={`mailto:${profile.email}`} className="nav__hire">
-          HIRE <ArrowUpRight size={14} strokeWidth={2.5} />
-        </a>
+        <Magnetic strength={0.2}>
+          <a href={`mailto:${profile.email}`} className="nav__hire">
+            HIRE <ArrowUpRight size={14} strokeWidth={2.5} />
+          </a>
+        </Magnetic>
 
         <button
           className="nav__burger"
