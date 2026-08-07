@@ -6,7 +6,7 @@ iGaming · Manual & Automation · Mobile & Web · ISTQB CTFL Certified.
 
 3.5 years across live, real-money gaming platforms and enterprise software — 1.5 of them fully remote.
 
-🌐 **Live:** [_Link_](https://iampundalikportfolio.netlify.app/)
+🌐 **Live:** [iampundalikportfolio.netlify.app](https://iampundalikportfolio.netlify.app/)
 
 ## Stack
 
@@ -15,7 +15,7 @@ iGaming · Manual & Automation · Mobile & Web · ISTQB CTFL Certified.
 - **Lenis** — inertial smooth scrolling (disabled under `prefers-reduced-motion`)
 - **react-fast-marquee** — scrolling tickers and gallery rows
 - **Lucide React** — icon set
-- Custom SVG mockups for QA dashboards, test reports, terminals, and AI anomaly detection
+- Custom SVG mockups for Allure reports, QA dashboards, browser sessions, terminals, and the AI defect-intake flow
 
 No backend. Static site, deployable to any host (Vercel, Netlify, GitHub Pages, etc.).
 
@@ -28,7 +28,7 @@ No backend. Static site, deployable to any host (Vercel, Netlify, GitHub Pages, 
 - **Bento skills grid** — 9 expertise cards with mixed spans
 - **Experience timeline** — Light & Wonder + Claysys Technologies, accent-coded
 - **Tech stack** — 6 resume-backed categories (Selenium, Cucumber/Gherkin, Python, Allure, Android/iOS, BrowserStack, Jenkins, Azure DevOps, SQL/SSMS, Spring Boot, Gemini API, etc.) with proficiency dots
-- **QA Lab gallery** — scrolling marquee of test reports, dashboards, browser sessions, terminals, and AI signal mockups
+- **QA Lab gallery** — scrolling marquee of Allure reports, dashboards, browser sessions, terminals, and AI defect-intake mockups
 - **Mobile-first responsive** — verified at 360px through 1440px
 - **Accessible** — WCAG AA contrast throughout, skip link, visible focus rings, full `prefers-reduced-motion` support
 - **Hardened** — CSP, HSTS, frame-ancestors none, and related headers set in `netlify.toml`
@@ -53,6 +53,8 @@ src/
 ├── App.css                    # section primitives, tags
 ├── data/
 │   └── portfolio.ts           # all content (profile, skills, experience, stack, projects, certs)
+├── lib/
+│   └── smoothScroll.ts        # Lenis setup + reduced-motion opt-out
 └── components/
     ├── Loading.tsx            # apple-style loader screen
     ├── Background.tsx         # animated canvas (orbs + particle web)
@@ -72,10 +74,12 @@ src/
     ├── Contact.tsx            # email + socials
     ├── Footer.tsx
     ├── Reveal.tsx             # framer-motion in-view reveal helper
+    ├── SectionHead.tsx        # per-character heading reveal
+    ├── ScrambleText.tsx       # decode-on-view text effect
+    ├── Magnetic.tsx           # cursor-magnetised wrapper
+    ├── Tilt.tsx               # 3D tilt wrapper
+    ├── BackToTop.tsx          # progress-ring scroll-to-top
     └── BrandIcons.tsx         # GitHub / LinkedIn icons
-
-lib/
-└── smoothScroll.ts            # Lenis setup + reduced-motion opt-out
 ```
 
 ## Deployment
