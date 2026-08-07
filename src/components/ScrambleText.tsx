@@ -43,8 +43,14 @@ export function ScrambleText({ text, className, duration = 900, delay = 0 }: Pro
     };
   }, [inView, reduce, text, duration, delay]);
 
-  // Assistive tech reads the real string; only the animating glyphs are hidden.
-  // (`role="text"` is non-standard and unsupported outside Safari, so it isn't used.)
+  // While glyphs are still settling, assistive tech reads a hidden real copy
+  // instead of the noise. Once settled we emit a single plain text node, so
+  // the string is never duplicated for search engines or copy-paste.
+  // (`role="text"` is non-standard outside Safari, so it isn't used.)
+  if (out === text) {
+    return <span ref={ref} className={className}>{text}</span>;
+  }
+
   return (
     <span ref={ref} className={className}>
       <span aria-hidden="true">{out}</span>
