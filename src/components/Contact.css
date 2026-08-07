@@ -1,54 +1,56 @@
 .contact__wrap {
-  max-width: 760px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
 .contact__card {
-  background: var(--surf);
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 24px;
   padding: 4.5rem 3.5rem;
   position: relative;
   overflow: hidden;
   margin-top: 3rem;
+  transition: border-color .3s;
 }
 .contact__glow {
   position: absolute;
-  top: -100px;
+  top: -120px;
   left: 50%;
   transform: translateX(-50%);
-  width: 500px;
-  height: 350px;
-  background: radial-gradient(ellipse, rgba(0,212,255,.07), transparent 65%);
+  width: 560px;
+  height: 380px;
+  background: radial-gradient(ellipse, rgba(52, 211, 153, 0.08), transparent 65%);
   pointer-events: none;
 }
 .contact__avail {
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  background: rgba(0,255,157,.07);
-  border: 1px solid rgba(0,255,157,.2);
+  background: rgba(52, 211, 153, 0.07);
+  border: 1px solid rgba(52, 211, 153, 0.22);
   padding: .5rem 1.2rem;
-  border-radius: 4px;
+  border-radius: 100px;
   font-family: var(--mono);
-  font-size: .66rem;
-  color: var(--green);
+  font-size: .64rem;
+  font-weight: 500;
+  color: var(--accent);
   letter-spacing: .1em;
   margin-bottom: 1.8rem;
 }
 .contact__avail-dot {
   width: 6px; height: 6px;
-  background: var(--green);
+  background: var(--accent);
   border-radius: 50%;
   animation: gp 2s infinite;
 }
 .contact__intro {
   color: var(--dim2);
-  font-size: .95rem;
+  font-size: .98rem;
   line-height: 1.85;
-  max-width: 460px;
+  max-width: 480px;
   margin: 0 auto;
-  font-weight: 500;
+  font-weight: 400;
 }
 .contact__email {
   display: inline-flex;
@@ -56,21 +58,21 @@
   justify-content: center;
   gap: .8rem;
   font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(.9rem, 2.2vw, 1.6rem);
-  color: var(--blue);
+  font-weight: 600;
+  font-size: clamp(.95rem, 2.2vw, 1.55rem);
+  color: var(--white);
   text-decoration: none;
-  letter-spacing: .04em;
+  letter-spacing: -0.01em;
   margin: 1.8rem auto 1.5rem;
-  transition: text-shadow .2s;
+  transition: color .2s;
   word-break: break-all;
 }
-.contact__email:hover { text-shadow: 0 0 30px rgba(0,212,255,.6); }
+.contact__email:hover { color: var(--accent); }
 
 .contact__links {
   display: flex;
   justify-content: center;
-  gap: .9rem;
+  gap: .8rem;
   flex-wrap: wrap;
   margin-top: 1.8rem;
 }
@@ -78,29 +80,29 @@
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  background: var(--surf2);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border2);
   padding: .8rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 100px;
   text-decoration: none;
   color: var(--white);
   font-size: .85rem;
-  font-weight: 600;
+  font-weight: 500;
   font-family: var(--ui);
-  transition: all .2s;
+  transition: border-color .2s, color .2s, background .2s, transform .2s;
 }
 .contact__link:hover {
-  border-color: var(--blue);
-  color: var(--blue);
-  background: rgba(0,212,255,.04);
+  border-color: rgba(52, 211, 153, 0.5);
+  color: var(--accent);
+  background: rgba(52, 211, 153, 0.05);
   transform: translateY(-2px);
 }
 
 @media (max-width: 720px) {
-  .contact__card { padding: 2.2rem 1.2rem; margin-top: 2rem; }
+  .contact__card { padding: 2.2rem 1.2rem; margin-top: 2rem; border-radius: var(--r); }
   .contact__intro { font-size: .85rem; line-height: 1.7; }
   .contact__email { font-size: 1rem; gap: .5rem; margin: 1.4rem auto 1.2rem; }
-  .contact__avail { font-size: .58rem; padding: .4rem .9rem; margin-bottom: 1.4rem; letter-spacing: .08em; }
+  .contact__avail { font-size: .64rem; padding: .4rem .9rem; margin-bottom: 1.4rem; letter-spacing: .08em; }
   .contact__links { gap: .5rem; margin-top: 1.4rem; }
-  .contact__link { font-size: .75rem; padding: .65rem 1rem; gap: .4rem; flex: 1 1 auto; justify-content: center; }
+  .contact__link { font-size: .78rem; padding: .8rem 1rem; min-height: 44px; gap: .4rem; flex: 1 1 auto; justify-content: center; }
 }

@@ -4,11 +4,12 @@
   border-bottom: 1px solid var(--border);
   position: relative;
   z-index: 1;
-  background: rgba(0,212,255,0.015);
+  background: rgba(255, 255, 255, 0.012);
 }
 .ticker__item {
   font-family: var(--mono);
   font-size: .68rem;
+  font-weight: 500;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--dim2);
@@ -20,7 +21,7 @@
 }
 .ticker__diamond {
   font-size: .38rem;
-  color: var(--blue);
+  color: var(--accent);
   margin-left: 1.5rem;
 }
 

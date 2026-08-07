@@ -14,7 +14,7 @@ class Boundary extends Component<{ children: ReactNode }, { err: Error | null; i
   render() {
     if (this.state.err) {
       return (
-        <pre style={{ color: '#ff6b35', padding: 20, background: '#0a131c', fontFamily: 'monospace', whiteSpace: 'pre-wrap', fontSize: 12 }}>
+        <pre style={{ color: '#fb7185', padding: 20, background: '#0d1016', fontFamily: 'monospace', whiteSpace: 'pre-wrap', fontSize: 12 }}>
           ERROR: {String(this.state.err?.message)}
           {'\n\n'}
           STACK: {this.state.err?.stack?.slice(0, 1500)}

@@ -17,6 +17,9 @@ export function Cursor() {
   useEffect(() => {
     if (!visible) return;
 
+    // Signals CSS that it's safe to hide the native cursor.
+    document.documentElement.classList.add('has-custom-cursor');
+
     const move = (e: MouseEvent) => {
       x.set(e.clientX);
       y.set(e.clientY);
@@ -33,6 +36,7 @@ export function Cursor() {
     document.addEventListener('mouseover', enter);
     document.addEventListener('mouseout', leave);
     return () => {
+      document.documentElement.classList.remove('has-custom-cursor');
       window.removeEventListener('mousemove', move);
       document.removeEventListener('mouseover', enter);
       document.removeEventListener('mouseout', leave);
@@ -54,11 +58,11 @@ export function Cursor() {
           translateY: '-50%',
           width: 6,
           height: 6,
-          background: 'var(--blue)',
+          background: 'var(--accent)',
           borderRadius: '50%',
           pointerEvents: 'none',
           zIndex: 9999,
-          boxShadow: '0 0 12px rgba(0,212,255,0.8)',
+          boxShadow: '0 0 12px rgba(52,211,153,0.8)',
         }}
       />
       <motion.div
@@ -71,7 +75,7 @@ export function Cursor() {
           translateX: '-50%',
           translateY: '-50%',
           borderRadius: '50%',
-          border: '1px solid rgba(0,212,255,0.5)',
+          border: '1px solid rgba(255,255,255,0.45)',
           pointerEvents: 'none',
           zIndex: 9998,
           mixBlendMode: 'difference',
@@ -79,7 +83,7 @@ export function Cursor() {
         animate={{
           width: hovering ? 56 : 32,
           height: hovering ? 56 : 32,
-          borderColor: hovering ? 'rgba(0,255,157,0.8)' : 'rgba(0,212,255,0.5)',
+          borderColor: hovering ? 'rgba(52,211,153,0.9)' : 'rgba(255,255,255,0.45)',
         }}
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
       />

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import {
-  FlaskConical, Theater, Bot, Zap, Brain, Cloud, Dices, Network, Rocket, Hash,
+  FlaskConical, Smartphone, Bot, Zap, Brain, Globe, Dices, Network, Rocket, Hash,
 } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { SectionHead } from './SectionHead';
@@ -10,11 +10,11 @@ import './Skills.css';
 
 const ICONS: Record<string, React.ComponentType<{ size?: number; strokeWidth?: number }>> = {
   flask: FlaskConical,
-  theater: Theater,
+  phone: Smartphone,
   bot: Bot,
   zap: Zap,
   brain: Brain,
-  cloud: Cloud,
+  globe: Globe,
   dice: Dices,
   graph: Network,
   rocket: Rocket,
@@ -28,7 +28,7 @@ export function Skills() {
         label="01 EXPERTISE"
         line1="WHAT I"
         line2="KNOW"
-        sub="Full spectrum quality engineering — strategy, execution, automation, AI-augmented testing."
+        sub="Full-spectrum quality engineering — manual and automated, mobile and web, from spec review through live production release."
       />
 
       <div className="skills">
@@ -40,7 +40,7 @@ export function Skills() {
               <Tilt className="tilt">
               <motion.div
                 className="skill"
-                whileHover={{ y: -4, borderColor: 'rgba(0,212,255,0.35)' }}
+                whileHover={{ y: -4, borderColor: 'rgba(52,211,153,0.35)' }}
                 transition={{ duration: 0.25 }}
               >
                 <span className="skill__topbar" />
@@ -51,8 +51,8 @@ export function Skills() {
                 )}
                 {isCount ? (
                   <>
-                    <div className="skill__big">3+</div>
-                    <div className="skill__big-l">Years shipping quality</div>
+                    <div className="skill__big">{s.title.replace(/\s*YEARS?$/i, '')}</div>
+                    <div className="skill__big-l">{s.desc}</div>
                   </>
                 ) : (
                   <>

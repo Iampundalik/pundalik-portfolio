@@ -2,7 +2,9 @@
 
 Personal portfolio site for **Pundalik Mhamal**, Senior Associate QA Engineer at Light & Wonder.
 
-iGaming · Automation · AI-assisted Testing · ISTQB Certified.
+iGaming · Manual & Automation · Mobile & Web · ISTQB CTFL Certified.
+
+3.5 years across live, real-money gaming platforms and enterprise software — 1.5 of them fully remote.
 
 🌐 **Live:** [_Link_](https://iampundalikportfolio.netlify.app/)
 
@@ -10,6 +12,7 @@ iGaming · Automation · AI-assisted Testing · ISTQB Certified.
 
 - **Vite** + **React 19** + **TypeScript**
 - **Framer Motion** — micro-interactions, scroll reveals, parallax, page transitions
+- **Lenis** — inertial smooth scrolling (disabled under `prefers-reduced-motion`)
 - **react-fast-marquee** — scrolling tickers and gallery rows
 - **Lucide React** — icon set
 - Custom SVG mockups for QA dashboards, test reports, terminals, and AI anomaly detection
@@ -22,11 +25,13 @@ No backend. Static site, deployable to any host (Vercel, Netlify, GitHub Pages, 
 - **Animated background** — canvas particles, ambient orbs, mouse-reactive
 - **Parallax scroll layers** — code blocks, terminals, and dashboards drift behind content at different speeds
 - **Custom cursor** — spring-tracked ring (auto-disabled on touch)
-- **Bento skills grid** — 10 expertise cards with mixed spans
+- **Bento skills grid** — 9 expertise cards with mixed spans
 - **Experience timeline** — Light & Wonder + Claysys Technologies, accent-coded
-- **Tech stack** — 8 categories, 72+ tools (Playwright, Cypress, k6, Allure, Datadog, Argo CD, Terraform, OWASP ZAP, AI/LLM testing, etc.) with proficiency dots
+- **Tech stack** — 6 resume-backed categories (Selenium, Cucumber/Gherkin, Python, Allure, Android/iOS, BrowserStack, Jenkins, Azure DevOps, SQL/SSMS, Spring Boot, Gemini API, etc.) with proficiency dots
 - **QA Lab gallery** — scrolling marquee of test reports, dashboards, browser sessions, terminals, and AI signal mockups
-- **Mobile-first responsive** — verified at 375px through desktop
+- **Mobile-first responsive** — verified at 360px through 1440px
+- **Accessible** — WCAG AA contrast throughout, skip link, visible focus rings, full `prefers-reduced-motion` support
+- **Hardened** — CSP, HSTS, frame-ancestors none, and related headers set in `netlify.toml`
 
 ## Run locally
 
@@ -68,6 +73,9 @@ src/
     ├── Footer.tsx
     ├── Reveal.tsx             # framer-motion in-view reveal helper
     └── BrandIcons.tsx         # GitHub / LinkedIn icons
+
+lib/
+└── smoothScroll.ts            # Lenis setup + reduced-motion opt-out
 ```
 
 ## Deployment
@@ -87,7 +95,7 @@ For Vercel/Netlify, point the project at this repo — they auto-detect Vite.
 - **LinkedIn** — [linkedin.com/in/iampundalik](https://linkedin.com/in/iampundalik)
 - **GitHub** — [github.com/Iampundalik](https://github.com/Iampundalik)
 - **Phone** — +91 98907 03905
-- **Location** — Goa, India · Remote / Hybrid / Open to relocation
+- **Location** — Goa, India · IST (UTC+5:30) · Remote / Hybrid / Open to relocation
 
 ---
 

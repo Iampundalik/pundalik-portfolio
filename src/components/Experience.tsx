@@ -13,7 +13,7 @@ export function Experience() {
         label="02 EXPERIENCE"
         line1="WORK"
         line2="HISTORY"
-        sub="Promoted at a global iGaming leader. 3 years across casino games and enterprise RPA."
+        sub="Promoted at a global iGaming leader. 3.5 years across live casino game platforms and enterprise RPA — 1.5 of them fully remote."
       />
 
       <div className="exp">
@@ -21,8 +21,8 @@ export function Experience() {
           <Reveal key={i} delay={i * 0.1}>
             <motion.article
               className="exp__card"
-              style={{ ['--lc' as string]: e.accent === 'blue' ? 'var(--blue)' : 'var(--green)' }}
-              whileHover={{ x: 4, borderColor: 'rgba(0,212,255,0.3)' }}
+              style={{ ['--lc' as string]: e.accent === 'blue' ? 'var(--accent)' : 'var(--sky)' }}
+              whileHover={{ x: 4, borderColor: 'rgba(255,255,255,0.16)' }}
               transition={{ duration: 0.3 }}
             >
               <div className="exp__period">

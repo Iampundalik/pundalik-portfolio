@@ -7,7 +7,7 @@ const Marquee = ((MarqueePkg as unknown as { default?: typeof MarqueePkg }).defa
 export function Ticker() {
   return (
     <div className="ticker">
-      <Marquee speed={45} gradient gradientColor="#020408" gradientWidth={120} pauseOnHover>
+      <Marquee speed={45} gradient gradientColor="#06070a" gradientWidth={120} pauseOnHover>
         {tickerItems.concat(tickerItems).map((t, i) => (
           <span key={i} className="ticker__item">
             {t}

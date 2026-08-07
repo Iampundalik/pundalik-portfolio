@@ -5,7 +5,7 @@
   margin-top: 4rem;
 }
 .cert {
-  background: var(--surf);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
   border: 1px solid var(--border);
   border-radius: var(--r);
   padding: 1.5rem;
@@ -14,41 +14,51 @@
   align-items: flex-start;
   position: relative;
   height: 100%;
+  transition: border-color .25s;
 }
 .cert::before {
   content: '';
   position: absolute;
   top: 0; left: 0; bottom: 0;
-  width: 1px;
-  background: var(--blue);
+  width: 2px;
+  border-radius: 2px;
+  background: var(--accent);
   opacity: 0;
   transition: opacity .25s;
 }
 .cert:hover::before { opacity: .6; }
+.cert:hover { border-color: var(--border2); }
 
 .cert__badge {
   width: 46px; height: 46px;
   min-width: 46px;
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,212,255,.07);
-  border: 1px solid rgba(0,212,255,.15);
-  color: var(--blue);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border2);
+  color: var(--dim2);
 }
 .cert__badge--star {
-  background: rgba(0,255,157,.1);
-  border-color: rgba(0,255,157,.3);
-  box-shadow: 0 0 20px rgba(0,255,157,.08);
-  color: var(--green);
+  background: rgba(52, 211, 153, 0.09);
+  border-color: rgba(52, 211, 153, 0.3);
+  color: var(--accent);
 }
 
-.cert__name { font-weight: 700; font-size: .9rem; color: var(--white); margin-bottom: .25rem; }
-.cert__name--hl { color: var(--green); }
+.cert__name {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: .92rem;
+  color: var(--white);
+  margin-bottom: .3rem;
+  letter-spacing: -0.005em;
+}
+.cert__name--hl { color: var(--accent); }
 .cert__date {
   font-family: var(--mono);
-  font-size: .6rem;
+  font-size: .66rem;
+  font-weight: 500;
   color: var(--dim);
   letter-spacing: .08em;
 }
@@ -57,6 +67,6 @@
   .certs { grid-template-columns: 1fr; gap: .8rem; margin-top: 2.5rem; }
   .cert { padding: 1.1rem; gap: .8rem; }
   .cert__badge { width: 40px; height: 40px; min-width: 40px; }
-  .cert__name { font-size: .82rem; }
-  .cert__date { font-size: .55rem; }
+  .cert__name { font-size: .84rem; }
+  .cert__date { font-size: .63rem; }
 }

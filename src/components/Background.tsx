@@ -36,7 +36,7 @@ export function Background() {
       vy: (Math.random() - 0.5) * 0.18,
       baseA: 0.018 + Math.random() * 0.045,
       a: 0,
-      c: Math.random() > 0.5 ? '0,212,255' : '0,255,157',
+      c: Math.random() > 0.5 ? '52,211,153' : '125,211,252',
       phase: Math.random() * Math.PI * 2,
       speed: 0.002 + Math.random() * 0.003,
     }));
@@ -48,7 +48,7 @@ export function Background() {
       p.vy = (Math.random() - 0.5) * 0.25;
       p.r = 0.4 + Math.random() * 1.4;
       p.a = 0.1 + Math.random() * 0.4;
-      p.c = Math.random() > 0.6 ? '0,212,255' : '0,255,157';
+      p.c = Math.random() > 0.6 ? '52,211,153' : '125,211,252';
     };
     const pts: Pt[] = Array.from({ length: 110 }, () => {
       const p = { x: 0, y: 0, vx: 0, vy: 0, r: 0, a: 0, c: '' };
@@ -97,7 +97,7 @@ export function Background() {
             ctx.beginPath();
             ctx.moveTo(pts[i].x, pts[i].y);
             ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.strokeStyle = `rgba(0,212,255,${a})`;
+            ctx.strokeStyle = `rgba(52,211,153,${a})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -143,8 +143,8 @@ export function Background() {
           zIndex: 0,
           pointerEvents: 'none',
           background: `
-            radial-gradient(ellipse at top, rgba(0,212,255,0.04), transparent 50%),
-            radial-gradient(ellipse at bottom, rgba(0,255,157,0.03), transparent 50%)
+            radial-gradient(ellipse at top, rgba(52,211,153,0.04), transparent 50%),
+            radial-gradient(ellipse at bottom, rgba(125,211,252,0.03), transparent 50%)
           `,
         }}
       />
@@ -156,8 +156,8 @@ export function Background() {
           zIndex: 0,
           pointerEvents: 'none',
           backgroundImage: `
-            linear-gradient(rgba(0,212,255,0.025) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,212,255,0.025) 1px, transparent 1px)
+            linear-gradient(rgba(52,211,153,0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(52,211,153,0.025) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
           maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 80%)',

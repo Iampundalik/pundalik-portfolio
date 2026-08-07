@@ -43,9 +43,12 @@ export function ScrambleText({ text, className, duration = 900, delay = 0 }: Pro
     };
   }, [inView, reduce, text, duration, delay]);
 
+  // Assistive tech reads the real string; only the animating glyphs are hidden.
+  // (`role="text"` is non-standard and unsupported outside Safari, so it isn't used.)
   return (
-    <span ref={ref} className={className} aria-label={text} role="text">
-      {out}
+    <span ref={ref} className={className}>
+      <span aria-hidden="true">{out}</span>
+      <span className="sr-only">{text}</span>
     </span>
   );
 }

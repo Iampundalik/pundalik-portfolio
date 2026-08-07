@@ -5,16 +5,16 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: rgba(8, 15, 24, 0.85);
+  background: rgba(12, 14, 19, 0.85);
   backdrop-filter: blur(8px);
   border: 1px solid var(--border2);
-  color: var(--blue);
+  color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 350;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 12px rgba(0, 212, 255, 0.12);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
 }
 
 .btt__ring {
@@ -30,12 +30,11 @@
   stroke-width: 2;
 }
 .btt__track {
-  stroke: rgba(0, 212, 255, 0.12);
+  stroke: rgba(255, 255, 255, 0.08);
 }
 .btt__bar {
-  stroke: var(--blue);
+  stroke: var(--accent);
   stroke-linecap: round;
-  filter: drop-shadow(0 0 4px rgba(0, 212, 255, 0.5));
 }
 
 @media (max-width: 720px) {

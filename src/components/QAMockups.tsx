@@ -1,26 +1,26 @@
 import { motion } from 'framer-motion';
 
 const C = {
-  bg: '#0a131c',
-  bg2: '#0d1822',
-  border: 'rgba(0,212,255,0.18)',
-  blue: '#00d4ff',
-  green: '#00ff9d',
-  orange: '#ff6b35',
-  red: '#ff4757',
-  dim: '#3a5570',
-  dim2: '#6a8faa',
-  white: '#e8f4ff',
+  bg: '#0d1016',
+  bg2: '#12151c',
+  border: 'rgba(52,211,153,0.18)',
+  blue: '#7dd3fc',
+  green: '#34d399',
+  orange: '#fbc964',
+  red: '#fb7185',
+  dim: '#565e6c',
+  dim2: '#8b93a5',
+  white: '#f2f5f9',
 };
 
 function WindowChrome({ title }: { title: string }) {
   return (
     <g>
-      <rect x="0" y="0" width="600" height="28" fill="#000a14" />
+      <rect x="0" y="0" width="600" height="28" fill="#07080c" />
       <circle cx="14" cy="14" r="5" fill={C.red} />
       <circle cx="32" cy="14" r="5" fill={C.orange} />
       <circle cx="50" cy="14" r="5" fill={C.green} />
-      <text x="300" y="18" fontFamily="Share Tech Mono, monospace" fontSize="10" fill={C.dim2} textAnchor="middle">
+      <text x="300" y="18" fontFamily="JetBrains Mono, monospace" fontSize="10" fill={C.dim2} textAnchor="middle">
         {title}
       </text>
     </g>
@@ -37,7 +37,7 @@ export function MockTestReport() {
         </linearGradient>
       </defs>
       <rect width="600" height="380" fill={C.bg} rx="6" />
-      <WindowChrome title="playwright-report.html — Test Results" />
+      <WindowChrome title="allure-report — Test Results" />
 
       {/* Summary cards */}
       <g transform="translate(20,46)">
@@ -49,8 +49,8 @@ export function MockTestReport() {
         ].map((s, i) => (
           <g key={i} transform={`translate(${i * 142}, 0)`}>
             <rect width="128" height="62" rx="5" fill={C.bg2} stroke={C.border} />
-            <text x="12" y="22" fontFamily="Share Tech Mono, monospace" fontSize="9" fill={C.dim} letterSpacing="1">{s.l}</text>
-            <text x="12" y="46" fontFamily="Orbitron, sans-serif" fontSize="20" fontWeight="800" fill={s.c}>{s.v}</text>
+            <text x="12" y="22" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.dim} letterSpacing="1">{s.l}</text>
+            <text x="12" y="46" fontFamily="Space Grotesk, sans-serif" fontSize="20" fontWeight="800" fill={s.c}>{s.v}</text>
           </g>
         ))}
       </g>
@@ -58,13 +58,13 @@ export function MockTestReport() {
       {/* Test list */}
       <g transform="translate(20,128)">
         {[
-          { name: 'login.spec.ts › auth › valid credentials', status: 'pass', time: '1.2s' },
-          { name: 'cart.spec.ts › add multiple items › guest', status: 'pass', time: '2.4s' },
-          { name: 'checkout.spec.ts › apply discount › invalid', status: 'pass', time: '0.9s' },
-          { name: 'rng.spec.ts › slot-base › 1000 spins distribution', status: 'pass', time: '8.7s' },
-          { name: 'paytable.spec.ts › free-spin trigger › edge case', status: 'fail', time: '3.1s' },
-          { name: 'api.spec.ts › POST /bet › schema validation', status: 'pass', time: '0.6s' },
-          { name: 'jackpot.spec.ts › progressive accrual sync', status: 'pass', time: '1.8s' },
+          { name: 'test_login.py::auth::valid_credentials', status: 'pass', time: '1.2s' },
+          { name: 'test_cart.py::add_multiple_items::guest', status: 'pass', time: '2.4s' },
+          { name: 'test_checkout.py::apply_discount::invalid', status: 'pass', time: '0.9s' },
+          { name: 'test_rng.py::slot_base::1000_spins', status: 'pass', time: '8.7s' },
+          { name: 'test_paytable.py::free_spin_trigger::edge', status: 'fail', time: '3.1s' },
+          { name: 'test_api.py::post_bet::schema', status: 'pass', time: '0.6s' },
+          { name: 'test_jackpot.py::progressive_accrual', status: 'pass', time: '1.8s' },
         ].map((r, i) => {
           const ok = r.status === 'pass';
           return (
@@ -72,8 +72,8 @@ export function MockTestReport() {
               <rect width="560" height="26" rx="4" fill={C.bg2} opacity="0.5" />
               <circle cx="14" cy="13" r="4" fill={ok ? C.green : C.red} />
               <text x="28" y="17" fontFamily="JetBrains Mono, monospace" fontSize="10" fill={C.white}>{r.name}</text>
-              <text x="500" y="17" fontFamily="Share Tech Mono, monospace" fontSize="9" fill={C.dim2}>{r.time}</text>
-              <text x="540" y="17" fontFamily="Share Tech Mono, monospace" fontSize="9" fill={ok ? C.green : C.red} textAnchor="end">{r.status.toUpperCase()}</text>
+              <text x="500" y="17" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.dim2}>{r.time}</text>
+              <text x="540" y="17" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={ok ? C.green : C.red} textAnchor="end">{r.status.toUpperCase()}</text>
             </g>
           );
         })}
@@ -83,7 +83,7 @@ export function MockTestReport() {
       <g transform="translate(20, 348)">
         <rect width="560" height="6" rx="3" fill={C.bg2} />
         <rect width="540" height="6" rx="3" fill="url(#rg-pass)" />
-        <text x="0" y="-8" fontFamily="Share Tech Mono, monospace" fontSize="9" fill={C.dim} letterSpacing="1.5">PASS RATE 96.4%</text>
+        <text x="0" y="-8" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.dim} letterSpacing="1.5">PASS RATE 96.4%</text>
       </g>
     </svg>
   );
@@ -93,7 +93,7 @@ export function MockBrowser() {
   return (
     <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style={{ width: '100%', height: '100%' }}>
       <rect width="600" height="380" fill={C.bg} rx="6" />
-      <WindowChrome title="Playwright • chromium • localhost:3000" />
+      <WindowChrome title="Selenium • chrome • staging.app.local" />
 
       {/* URL bar */}
       <rect x="68" y="40" width="464" height="20" rx="10" fill={C.bg2} stroke={C.border} />
@@ -102,7 +102,7 @@ export function MockBrowser() {
 
       {/* Page mock — a fake e-commerce checkout */}
       <g transform="translate(28, 78)">
-        <text x="0" y="14" fontFamily="Orbitron, sans-serif" fontSize="14" fontWeight="800" fill={C.white}>YOUR CART</text>
+        <text x="0" y="14" fontFamily="Space Grotesk, sans-serif" fontSize="14" fontWeight="800" fill={C.white}>YOUR CART</text>
         <line x1="0" y1="22" x2="544" y2="22" stroke={C.border} />
 
         {[
@@ -113,23 +113,23 @@ export function MockBrowser() {
           <g key={i} transform={`translate(0, ${36 + i * 38})`}>
             <rect width="544" height="32" rx="4" fill={C.bg2} stroke={C.border} />
             <rect x="6" y="4" width="24" height="24" rx="3" fill={C.dim} />
-            <text x="36" y="20" fontFamily="Rajdhani, sans-serif" fontSize="11" fontWeight="600" fill={C.white}>{it.name}</text>
-            <text x="430" y="20" fontFamily="Share Tech Mono, monospace" fontSize="10" fill={C.dim2}>{it.qty}</text>
-            <text x="525" y="20" fontFamily="Share Tech Mono, monospace" fontSize="10" fill={C.blue} textAnchor="end">{it.price}</text>
+            <text x="36" y="20" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="600" fill={C.white}>{it.name}</text>
+            <text x="430" y="20" fontFamily="JetBrains Mono, monospace" fontSize="10" fill={C.dim2}>{it.qty}</text>
+            <text x="525" y="20" fontFamily="JetBrains Mono, monospace" fontSize="10" fill={C.blue} textAnchor="end">{it.price}</text>
           </g>
         ))}
 
         <g transform="translate(0, 168)">
-          <text x="0" y="0" fontFamily="Share Tech Mono, monospace" fontSize="9" fill={C.dim} letterSpacing="1">SUBTOTAL</text>
-          <text x="544" y="0" fontFamily="Orbitron, sans-serif" fontSize="14" fontWeight="700" fill={C.green} textAnchor="end">$203.00</text>
+          <text x="0" y="0" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.dim} letterSpacing="1">SUBTOTAL</text>
+          <text x="544" y="0" fontFamily="Space Grotesk, sans-serif" fontSize="14" fontWeight="700" fill={C.green} textAnchor="end">$203.00</text>
         </g>
 
         <rect x="0" y="184" width="544" height="36" rx="4" fill={C.blue} />
-        <text x="272" y="207" fontFamily="Share Tech Mono, monospace" fontSize="10" fill={C.bg} textAnchor="middle" letterSpacing="2">PROCEED TO CHECKOUT →</text>
+        <text x="272" y="207" fontFamily="JetBrains Mono, monospace" fontSize="10" fill={C.bg} textAnchor="middle" letterSpacing="2">PROCEED TO CHECKOUT →</text>
 
-        {/* Fake Playwright locator highlight */}
+        {/* Locator highlight */}
         <rect x="-4" y="180" width="552" height="44" fill="none" stroke={C.green} strokeWidth="1.5" strokeDasharray="3 3" rx="6" />
-        <text x="0" y="240" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.green}>page.locator('button[data-testid="checkout"]').click()</text>
+        <text x="0" y="240" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.green}>driver.find_element(By.CSS_SELECTOR, "[data-testid=checkout]").click()</text>
       </g>
     </svg>
   );
@@ -191,8 +191,8 @@ export function MockDashboard() {
         ].map((s, i) => (
           <g key={i} transform={`translate(${i * 142}, 0)`}>
             <rect width="128" height="62" rx="5" fill={C.bg2} stroke={C.border} />
-            <text x="12" y="22" fontFamily="Share Tech Mono, monospace" fontSize="9" fill={C.dim} letterSpacing="1">{s.l}</text>
-            <text x="12" y="46" fontFamily="Orbitron, sans-serif" fontSize="18" fontWeight="800" fill={s.c}>{s.v}</text>
+            <text x="12" y="22" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.dim} letterSpacing="1">{s.l}</text>
+            <text x="12" y="46" fontFamily="Space Grotesk, sans-serif" fontSize="18" fontWeight="800" fill={s.c}>{s.v}</text>
           </g>
         ))}
       </g>
@@ -200,11 +200,11 @@ export function MockDashboard() {
       {/* Bar chart - tests per sprint */}
       <g transform="translate(20, 130)">
         <rect width="356" height="220" rx="5" fill={C.bg2} stroke={C.border} />
-        <text x="14" y="22" fontFamily="Share Tech Mono, monospace" fontSize="9" fill={C.dim2} letterSpacing="1">TESTS EXECUTED / DAY</text>
+        <text x="14" y="22" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.dim2} letterSpacing="1">TESTS EXECUTED / DAY</text>
         {bars.map((h, i) => (
           <g key={i}>
             <rect x={20 + i * 28} y={200 - h * 1.4} width="18" height={h * 1.4} fill="url(#bg-bar)" rx="2" />
-            <text x={29 + i * 28} y={212} fontFamily="Share Tech Mono, monospace" fontSize="7" fill={C.dim} textAnchor="middle">{i + 1}</text>
+            <text x={29 + i * 28} y={212} fontFamily="JetBrains Mono, monospace" fontSize="7" fill={C.dim} textAnchor="middle">{i + 1}</text>
           </g>
         ))}
       </g>
@@ -212,7 +212,7 @@ export function MockDashboard() {
       {/* Line chart - pass rate trend */}
       <g transform="translate(390, 130)">
         <rect width="190" height="220" rx="5" fill={C.bg2} stroke={C.border} />
-        <text x="14" y="22" fontFamily="Share Tech Mono, monospace" fontSize="9" fill={C.dim2} letterSpacing="1">PASS RATE</text>
+        <text x="14" y="22" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.dim2} letterSpacing="1">PASS RATE</text>
         <polyline
           fill="none"
           stroke="url(#bg-line)"
@@ -222,7 +222,7 @@ export function MockDashboard() {
         {[180, 160, 140, 150, 110, 95, 80].map((y, i) => (
           <circle key={i} cx={20 + i * 25} cy={y} r="3" fill={C.green} />
         ))}
-        <text x="14" y="200" fontFamily="Orbitron, sans-serif" fontSize="14" fontWeight="700" fill={C.green}>96.8%</text>
+        <text x="14" y="200" fontFamily="Space Grotesk, sans-serif" fontSize="14" fontWeight="700" fill={C.green}>96.8%</text>
       </g>
     </svg>
   );
@@ -244,25 +244,25 @@ export function MockAI() {
         </linearGradient>
       </defs>
       <rect width="600" height="380" fill={C.bg} rx="6" />
-      <WindowChrome title="AI Test Generator — anomaly detector" />
+      <WindowChrome title="AI Defect-Intake — Gemini → Jira REST v2" />
 
       {/* Prompt panel */}
       <g transform="translate(20, 46)">
         <rect width="560" height="80" rx="5" fill={C.bg2} stroke={C.border} />
-        <text x="14" y="20" fontFamily="Share Tech Mono, monospace" fontSize="9" fill={C.dim2} letterSpacing="1">PROMPT → LLM</text>
+        <text x="14" y="20" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.dim2} letterSpacing="1">RAW NOTE → STRUCTURED TICKET</text>
         <text x="14" y="40" fontFamily="JetBrains Mono, monospace" fontSize="10" fill={C.white}>
-          "Generate edge-case tests for slot RNG distribution validation"
+          "free spins not awarded after retrigger on android build 412"
         </text>
         <text x="14" y="58" fontFamily="JetBrains Mono, monospace" fontSize="10" fill={C.green}>
-          → 24 test cases · 6 anomaly patterns · prioritized by risk
+          → steps · severity · env · evidence → JIRA-4821 created
         </text>
         <rect x="14" y="64" width="80" height="12" rx="2" fill={C.green} opacity="0.2" />
-        <text x="20" y="74" fontFamily="Share Tech Mono, monospace" fontSize="8" fill={C.green}>READY</text>
+        <text x="20" y="74" fontFamily="JetBrains Mono, monospace" fontSize="8" fill={C.green}>FILED</text>
       </g>
 
-      {/* RNG signal + anomaly markers */}
+      {/* Intake time saved */}
       <g transform="translate(0, 140)">
-        <text x="20" y="0" fontFamily="Share Tech Mono, monospace" fontSize="9" fill={C.dim2} letterSpacing="1">RNG SIGNAL · ANOMALIES DETECTED</text>
+        <text x="20" y="0" fontFamily="JetBrains Mono, monospace" fontSize="9" fill={C.dim2} letterSpacing="1">INTAKE TIME · 25 MIN → UNDER 5</text>
         <polyline points={points} fill="none" stroke="url(#ai-grad)" strokeWidth="1.6" />
         {/* Anomaly markers */}
         {[15, 38, 64].map((idx) => (
@@ -277,7 +277,7 @@ export function MockAI() {
               strokeDasharray="2 3"
               opacity="0.6"
             />
-            <text x={idx * 7.5} y={114} fontFamily="Share Tech Mono, monospace" fontSize="8" fill={C.orange} textAnchor="middle">!</text>
+            <text x={idx * 7.5} y={114} fontFamily="JetBrains Mono, monospace" fontSize="8" fill={C.orange} textAnchor="middle">!</text>
           </g>
         ))}
       </g>
@@ -299,8 +299,8 @@ export function QAImage({ kind, accent }: { kind: string; accent?: string }) {
         position: 'relative',
         borderRadius: 8,
         overflow: 'hidden',
-        boxShadow: `0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px ${accent || 'rgba(0,212,255,0.18)'}33`,
-        background: '#0a131c',
+        boxShadow: `0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px ${accent || 'rgba(52,211,153,0.18)'}33`,
+        background: '#0d1016',
       }}
     >
       {inner}

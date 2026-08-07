@@ -7,6 +7,7 @@ import {
   useReducedMotion,
 } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
+import { scrollToTop } from '../lib/smoothScroll';
 import './BackToTop.css';
 
 /** Floating back-to-top button with a scroll-progress ring. */
@@ -35,7 +36,7 @@ export function BackToTop() {
           transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
           whileHover={reduce ? undefined : { scale: 1.08 }}
           whileTap={reduce ? undefined : { scale: 0.92 }}
-          onClick={() => window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })}
+          onClick={() => (reduce ? window.scrollTo({ top: 0 }) : scrollToTop())}
         >
           <svg className="btt__ring" viewBox="0 0 44 44" aria-hidden>
             <circle className="btt__track" cx="22" cy="22" r="19" />

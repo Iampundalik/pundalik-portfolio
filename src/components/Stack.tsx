@@ -36,7 +36,7 @@ export function Stack() {
                   <motion.div
                     key={t.name}
                     className="stack__tool"
-                    whileHover={{ y: -3, color: 'var(--blue)', borderColor: 'rgba(0,212,255,0.3)' }}
+                    whileHover={{ y: -3, color: 'var(--accent)', borderColor: 'rgba(52,211,153,0.4)' }}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

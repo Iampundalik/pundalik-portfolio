@@ -10,40 +10,41 @@
   margin: 0 .75rem;
   background: var(--surf);
   border: 1px solid var(--border2);
-  border-radius: 10px;
+  border-radius: var(--r);
   overflow: hidden;
   cursor: default;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
 }
 
 @media (max-width: 720px) {
   .lab__rows { gap: 1rem; margin: 2.5rem -5vw 0; }
-  .lab__card { width: 280px; margin: 0 .4rem; border-radius: 8px; }
-  .lab__card-label { font-size: .55rem; padding: .6rem .7rem; }
+  .lab__card { width: 280px; margin: 0 .4rem; border-radius: 12px; }
+  .lab__card-label { font-size: .63rem; padding: .6rem .7rem; }
   .lab__strip { margin: 2.5rem -5vw 0; padding: 1.4rem 0; }
   .lab__strip-track { gap: 2rem; }
   .lab__strip-item { font-size: 1.4rem; }
 }
-.lab__card-media { aspect-ratio: 600 / 380; background: #0a131c; }
+.lab__card-media { aspect-ratio: 600 / 380; background: #0b0d12; }
 
 .lab__card-label {
   font-family: var(--mono);
-  font-size: .65rem;
+  font-size: .64rem;
+  font-weight: 500;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--blue);
+  color: var(--dim2);
   padding: .8rem 1rem;
   border-top: 1px solid var(--border);
   display: flex;
   align-items: center;
   gap: .6rem;
-  background: rgba(0,212,255,0.03);
+  background: rgba(255, 255, 255, 0.02);
 }
 .lab__card-dot {
   width: 6px; height: 6px;
-  background: var(--green);
+  background: var(--accent);
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--green);
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.7);
 }
 
 .lab__strip {
@@ -52,7 +53,7 @@
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 2rem 0;
-  background: linear-gradient(90deg, rgba(0,212,255,0.02), rgba(0,255,157,0.02));
+  background: rgba(255, 255, 255, 0.012);
 }
 .lab__strip-track {
   display: flex;
@@ -61,12 +62,12 @@
 }
 .lab__strip-item {
   font-family: var(--display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(1.6rem, 4vw, 3rem);
-  letter-spacing: .04em;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(0,212,255,0.4);
-  background: linear-gradient(90deg, var(--blue) 0%, var(--green) 100%);
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--sky) 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: .85;
 }

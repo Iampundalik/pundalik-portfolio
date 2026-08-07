@@ -72,10 +72,11 @@ export function Hero() {
           animate="visible"
           custom={0.7}
         >
-          <strong>3+ years</strong> engineering quality at scale.
-          Playwright, Selenium, API testing, CI/CD pipelines — with hands-on knowledge in{' '}
-          <strong>AI-assisted testing</strong>, <strong>Kubernetes</strong>, <strong>networking</strong>, and <strong>DSA</strong>.
-          ISTQB Certified. GLI compliant.
+          <strong>3.5 years</strong> across live, real-money gaming platforms and enterprise
+          software — including <strong>1.5 years fully remote</strong> across time zones.
+          Manual and automated QA on <strong>Android, iOS and web</strong>, a{' '}
+          <strong>Selenium + Cucumber BDD</strong> suite wired into Jenkins CI/CD, and backend
+          REST/SQL validation. ISTQB CTFL certified. GLI compliant.
         </motion.p>
 
         <motion.div
@@ -113,7 +114,7 @@ export function Hero() {
             <motion.div
               key={m.l}
               className="hero__metric"
-              whileHover={{ y: -3, backgroundColor: 'rgba(0,212,255,0.08)' }}
+              whileHover={{ y: -3, backgroundColor: 'rgba(255,255,255,0.05)' }}
               transition={{ duration: 0.2 }}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}

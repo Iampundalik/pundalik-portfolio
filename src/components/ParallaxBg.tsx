@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 
-function GridImage({ accent = '#00d4ff' }: { accent?: string }) {
+function GridImage({ accent = '#7dd3fc' }: { accent?: string }) {
   return (
     <svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
       <defs>
@@ -16,19 +16,19 @@ function GridImage({ accent = '#00d4ff' }: { accent?: string }) {
 function CodeBlock() {
   return (
     <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-      <rect width="400" height="280" fill="#080f18" rx="6" />
-      <rect width="400" height="22" fill="#000a14" />
-      <circle cx="12" cy="11" r="3.5" fill="#ff4757" /><circle cx="26" cy="11" r="3.5" fill="#ff6b35" /><circle cx="40" cy="11" r="3.5" fill="#00ff9d" />
+      <rect width="400" height="280" fill="#0b0d12" rx="6" />
+      <rect width="400" height="22" fill="#07080c" />
+      <circle cx="12" cy="11" r="3.5" fill="#fb7185" /><circle cx="26" cy="11" r="3.5" fill="#fbc964" /><circle cx="40" cy="11" r="3.5" fill="#34d399" />
       {[
-        { c: '#6a8faa', t: 'import { test, expect } from "@playwright/test";' },
+        { c: '#8b93a5', t: 'from selenium.webdriver.common.by import By' },
         { c: '#ffffff', t: '' },
-        { c: '#00d4ff', t: 'test("checkout flow → completes successfully",' },
-        { c: '#00d4ff', t: '  async ({ page }) => {' },
-        { c: '#6a8faa', t: '    await page.goto("/products");' },
-        { c: '#6a8faa', t: '    await page.click("[data-test=add-to-cart]");' },
-        { c: '#00ff9d', t: '    await expect(page.locator(".cart-count"))' },
-        { c: '#00ff9d', t: '      .toHaveText("1");' },
-        { c: '#00d4ff', t: '});' },
+        { c: '#7dd3fc', t: 'test("checkout flow → completes successfully",' },
+        { c: '#7dd3fc', t: '  async ({ page }) => {' },
+        { c: '#8b93a5', t: '    await page.goto("/products");' },
+        { c: '#8b93a5', t: '    await page.click("[data-test=add-to-cart]");' },
+        { c: '#34d399', t: '    await expect(page.locator(".cart-count"))' },
+        { c: '#34d399', t: '      .toHaveText("1");' },
+        { c: '#7dd3fc', t: '});' },
       ].map((l, i) => (
         <text key={i} x="14" y={50 + i * 22} fontFamily="JetBrains Mono, monospace" fontSize="11" fill={l.c}>{l.t}</text>
       ))}
@@ -39,13 +39,13 @@ function CodeBlock() {
 function ChartTile() {
   return (
     <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-      <rect width="400" height="280" fill="#080f18" rx="6" />
-      <text x="20" y="30" fontFamily="Share Tech Mono, monospace" fontSize="10" fill="#6a8faa" letterSpacing="2">PASS RATE / SPRINT</text>
-      <polyline fill="none" stroke="#00ff9d" strokeWidth="2" points="20,200 80,170 140,150 200,140 260,100 320,90 380,60" />
+      <rect width="400" height="280" fill="#0b0d12" rx="6" />
+      <text x="20" y="30" fontFamily="JetBrains Mono, monospace" fontSize="10" fill="#8b93a5" letterSpacing="2">PASS RATE / SPRINT</text>
+      <polyline fill="none" stroke="#34d399" strokeWidth="2" points="20,200 80,170 140,150 200,140 260,100 320,90 380,60" />
       {[200, 170, 150, 140, 100, 90, 60].map((y, i) => (
-        <circle key={i} cx={20 + i * 60} cy={y} r="3" fill="#00d4ff" />
+        <circle key={i} cx={20 + i * 60} cy={y} r="3" fill="#7dd3fc" />
       ))}
-      <text x="380" y="55" fontFamily="Orbitron, sans-serif" fontWeight="700" fontSize="14" fill="#00ff9d" textAnchor="end">96.8%</text>
+      <text x="380" y="55" fontFamily="Space Grotesk, sans-serif" fontWeight="700" fontSize="14" fill="#34d399" textAnchor="end">96.8%</text>
     </svg>
   );
 }
@@ -53,16 +53,16 @@ function ChartTile() {
 function TerminalTile() {
   return (
     <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-      <rect width="400" height="280" fill="#080f18" rx="6" />
-      <rect width="400" height="22" fill="#000a14" />
-      <text x="200" y="14" fontFamily="Share Tech Mono, monospace" fontSize="9" fill="#6a8faa" textAnchor="middle">qa@runner — bash</text>
+      <rect width="400" height="280" fill="#0b0d12" rx="6" />
+      <rect width="400" height="22" fill="#07080c" />
+      <text x="200" y="14" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="#8b93a5" textAnchor="middle">qa@runner — bash</text>
       {[
-        { c: '#00ff9d', t: '$ npx playwright test --reporter=list' },
-        { c: '#6a8faa', t: 'Running 247 tests using 6 workers' },
-        { c: '#00ff9d', t: '✓ login.spec.ts:8  (1.2s)' },
-        { c: '#00ff9d', t: '✓ cart.spec.ts:14  (2.4s)' },
-        { c: '#00ff9d', t: '✓ checkout.spec.ts:22  (3.1s)' },
-        { c: '#00d4ff', t: '247 passed (4m 12s)' },
+        { c: '#34d399', t: '$ pytest -m regression --alluredir=out' },
+        { c: '#8b93a5', t: 'Running 247 tests using 6 workers' },
+        { c: '#34d399', t: '✓ login.spec.ts:8  (1.2s)' },
+        { c: '#34d399', t: '✓ cart.spec.ts:14  (2.4s)' },
+        { c: '#34d399', t: '✓ checkout.spec.ts:22  (3.1s)' },
+        { c: '#7dd3fc', t: '247 passed (4m 12s)' },
       ].map((l, i) => (
         <text key={i} x="14" y={50 + i * 22} fontFamily="JetBrains Mono, monospace" fontSize="10" fill={l.c}>{l.t}</text>
       ))}

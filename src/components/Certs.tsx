@@ -19,7 +19,7 @@ export function Certs() {
             <Reveal key={c.name} delay={(i % 3) * 0.07}>
               <motion.div
                 className={`cert ${c.star ? 'cert--star' : ''}`}
-                whileHover={{ x: 3, borderColor: 'rgba(0,212,255,0.25)' }}
+                whileHover={{ x: 3, borderColor: 'rgba(255,255,255,0.16)' }}
               >
                 <div className={`cert__badge ${c.star ? 'cert__badge--star' : ''}`}>
                   <Icon size={20} strokeWidth={1.6} />

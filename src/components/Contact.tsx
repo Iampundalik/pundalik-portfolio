@@ -22,7 +22,7 @@ export function Contact() {
         <Reveal delay={0.1}>
           <motion.div
             className="contact__card"
-            whileHover={{ borderColor: 'rgba(0,212,255,0.3)' }}
+            whileHover={{ borderColor: 'rgba(52,211,153,0.3)' }}
             transition={{ duration: 0.3 }}
           >
             <div className="contact__glow" />
@@ -31,8 +31,9 @@ export function Contact() {
               OPEN TO SENIOR QA / SDET / AUTOMATION ROLES
             </div>
             <p className="contact__intro">
-              Senior Associate QA Engineer with full-stack testing expertise. iGaming domain.
-              Automation-first. Remote, hybrid, or relocation.
+              Senior Associate QA Engineer — 3.5 years across live real-money gaming and
+              enterprise software, 1.5 of them fully remote. Manual and automation, mobile and
+              web. Remote, hybrid, or open to relocation.
             </p>
             <Magnetic strength={0.15}>
               <a href={`mailto:${profile.email}`} className="contact__email">

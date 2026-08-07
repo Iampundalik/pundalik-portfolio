@@ -1,35 +1,38 @@
 .stack__legend {
   display: flex;
   gap: 1.4rem;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   flex-wrap: wrap;
 }
 .stack__legend-item {
   display: flex;
   align-items: center;
-  gap: .4rem;
+  gap: .45rem;
   font-family: var(--mono);
-  font-size: .62rem;
+  font-size: .66rem;
+  font-weight: 500;
   color: var(--dim);
+  letter-spacing: .05em;
 }
 
 .stack__cats {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.6rem;
   margin-top: 4rem;
 }
 
 .stack__cat-name {
   font-family: var(--mono);
-  font-size: .63rem;
+  font-size: .67rem;
+  font-weight: 500;
   color: var(--dim);
   letter-spacing: .18em;
   text-transform: uppercase;
-  margin-bottom: .9rem;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  gap: .7rem;
+  gap: .8rem;
 }
 .stack__cat-name::after {
   content: '';
@@ -41,23 +44,26 @@
 .stack__tools {
   display: flex;
   flex-wrap: wrap;
-  gap: .7rem;
+  gap: .6rem;
 }
 .stack__tool {
-  background: var(--surf);
+  background: rgba(255, 255, 255, 0.025);
   border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: .75rem 1.1rem;
+  border-radius: 100px;
+  padding: .68rem 1.15rem;
   display: flex;
   align-items: center;
   gap: .6rem;
   font-family: var(--mono);
   font-size: .7rem;
+  font-weight: 500;
   color: var(--dim2);
   cursor: default;
   white-space: nowrap;
   position: relative;
+  transition: border-color .2s, background .2s;
 }
+.stack__tool:hover { background: rgba(255, 255, 255, 0.05); }
 
 .stack__lvl, .stack__dot {
   display: inline-block;
@@ -65,13 +71,13 @@
   height: 6px;
   border-radius: 50%;
 }
-.stack__lvl--e, .stack__dot--e { background: var(--blue); box-shadow: 0 0 6px var(--blue); }
-.stack__lvl--p, .stack__dot--p { background: var(--green); }
-.stack__lvl--l, .stack__dot--l { background: var(--orange); }
+.stack__lvl--e, .stack__dot--e { background: var(--accent); box-shadow: 0 0 8px rgba(52, 211, 153, 0.6); }
+.stack__lvl--p, .stack__dot--p { background: var(--sky); }
+.stack__lvl--l, .stack__dot--l { background: var(--amber); }
 
 @media (max-width: 720px) {
   .stack__cats { gap: 1.8rem; margin-top: 2.5rem; }
   .stack__tools { gap: .5rem; }
-  .stack__tool { padding: .55rem .8rem; font-size: .62rem; gap: .45rem; }
-  .stack__cat-name { font-size: .58rem; gap: .5rem; }
+  .stack__tool { padding: .55rem .85rem; font-size: .66rem; gap: .45rem; }
+  .stack__cat-name { font-size: .64rem; gap: .5rem; }
 }

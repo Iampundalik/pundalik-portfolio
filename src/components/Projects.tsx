@@ -15,7 +15,7 @@ export function Projects() {
         label="04 PROJECTS"
         line1="THINGS"
         line2="BUILT"
-        sub="Hands-on automation frameworks, scrapers and AI experiments."
+        sub="Production tooling and automation frameworks — from an AI defect-intake service shipped to my team, to E2E suites and scrapers."
       />
 
       <div className="proj">

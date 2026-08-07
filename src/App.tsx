@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { initSmoothScroll } from './lib/smoothScroll';
 import { BackToTop } from './components/BackToTop';
 import './App.css';
 import { Background } from './components/Background';
@@ -49,6 +50,12 @@ function App() {
     }
   }, [loading, reduce]);
 
+  // Start inertial scrolling only once the loader is gone.
+  useEffect(() => {
+    if (!revealed) return;
+    return initSmoothScroll();
+  }, [revealed]);
+
   return (
     <div className="app">
       <AnimatePresence>
@@ -69,8 +76,9 @@ function App() {
             transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1] }}
             style={{ transformOrigin: 'center center', position: 'relative' }}
           >
+            <a href="#skills" className="skip-link">Skip to content</a>
             <Nav />
-            <main>
+            <main id="main">
               <Hero />
               <Ticker />
               <Skills />
