@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Lock } from 'lucide-react';
 import { GithubIcon } from './BrandIcons';
 import { Reveal } from './Reveal';
 import { SectionHead } from './SectionHead';
@@ -34,9 +34,21 @@ export function Projects() {
               <div className="proj__body">
                 <div className="proj__top">
                   <div className="proj__name">{p.name}</div>
-                  <a href={p.href} target="_blank" rel="noopener noreferrer" className="proj__gh">
-                    <GithubIcon size={11} /> GitHub <ArrowUpRight size={10} />
-                  </a>
+                  {p.href ? (
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="proj__gh"
+                      aria-label={`${p.name} source on GitHub`}
+                    >
+                      <GithubIcon size={11} /> GitHub <ArrowUpRight size={10} />
+                    </a>
+                  ) : (
+                    <span className="proj__note">
+                      <Lock size={10} strokeWidth={2.2} /> {p.note}
+                    </span>
+                  )}
                 </div>
                 <p className="proj__desc">{p.desc}</p>
                 <div className="tags">

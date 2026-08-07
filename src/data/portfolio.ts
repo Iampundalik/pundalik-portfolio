@@ -232,6 +232,7 @@ export const stack: { cat: string; tools: Tool[] }[] = [
   },
 ];
 
+/** `href` omitted = employer-owned work with no public source to link to. */
 export const projects = [
   {
     name: 'AI Defect-Intake Tool',
@@ -240,7 +241,7 @@ export const projects = [
       { label: 'Spring Boot', tone: 'o' as const }, { label: 'Gemini API', tone: 'o' as const },
       { label: 'Jira REST v2', tone: 'o' as const }, { label: 'Java', tone: 'o' as const },
     ],
-    href: 'https://github.com/Iampundalik',
+    note: 'Internal · Light & Wonder',
     accent: '#fbc964',
     image: 'ai',
   },
@@ -251,29 +252,29 @@ export const projects = [
       { label: 'Selenium', tone: 'g' as const }, { label: 'Cucumber', tone: 'g' as const },
       { label: 'Python', tone: 'g' as const }, { label: 'Allure', tone: 'g' as const },
     ],
-    href: 'https://github.com/Iampundalik',
+    note: 'Internal · Light & Wonder',
     accent: '#34d399',
     image: 'browser',
   },
   {
     name: 'SwagLabs Automation Framework',
-    desc: 'E2E test automation for e-commerce using Python + Selenium with the Page Object Model. Full checkout, cart and auth flow coverage — CI-integrated and maintainable at scale.',
+    desc: 'E2E test automation for the SauceDemo storefront — Python + Selenium with Behave BDD, a Page Object layer and HTML reporting. Feature files cover the auth, cart and checkout journeys.',
     tags: [
       { label: 'Python', tone: 'g' as const }, { label: 'Selenium', tone: 'g' as const },
-      { label: 'POM', tone: 'g' as const }, { label: 'E2E', tone: 'g' as const },
+      { label: 'Behave BDD', tone: 'g' as const }, { label: 'POM', tone: 'g' as const },
     ],
-    href: 'https://github.com/Iampundalik',
+    href: 'https://github.com/Iampundalik/SauceDemo-Automation_Framework',
     accent: '#34d399',
     image: 'dashboard',
   },
   {
     name: 'Flipkart DataScrapper',
-    desc: 'Web scraping automation built on Selenium WebDriver. Structured product data extraction with error handling, anti-detection patterns and clean JSON output.',
+    desc: 'Web scraping automation built on Selenium WebDriver. Structured product data extraction with error handling, anti-detection patterns and clean output.',
     tags: [
       { label: 'Python', tone: 'b' as const }, { label: 'Selenium', tone: 'b' as const },
       { label: 'Web Scraping', tone: 'b' as const },
     ],
-    href: 'https://github.com/Iampundalik',
+    href: 'https://github.com/Iampundalik/Testing-Projects',
     accent: '#7dd3fc',
     image: 'terminal',
   },

@@ -55,6 +55,23 @@
   transition: background .2s, border-color .2s;
 }
 .proj__gh:hover { background: rgba(52, 211, 153, 0.16); border-color: rgba(52, 211, 153, 0.35); }
+
+/* Employer-owned work: states plainly that there is no public source */
+.proj__note {
+  font-family: var(--mono);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: var(--dim);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: .55rem .85rem;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  white-space: nowrap;
+}
 .proj__desc { font-size: .85rem; color: var(--dim2); line-height: 1.7; font-weight: 400; }
 
 @media (max-width: 960px) {
