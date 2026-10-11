@@ -10,6 +10,7 @@ import { ScrollProgress } from './components/ScrollProgress';
 import { Loading } from './components/Loading';
 import { Nav } from './components/Nav';
 import { Hero } from './components/Hero';
+import { About } from './components/About';
 import { Ticker } from './components/Marquee';
 import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
@@ -76,18 +77,18 @@ function App() {
             transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1] }}
             style={{ transformOrigin: 'center center', position: 'relative' }}
           >
-            <a href="#skills" className="skip-link">Skip to content</a>
+            <a href="#about" className="skip-link">Skip to content</a>
             <Nav />
             <main id="main">
               <Hero />
               <Ticker />
+              <About />
               <Skills />
+              <Projects />
               <Divider />
               <Experience />
               <Divider />
               <Stack />
-              <Divider />
-              <Projects />
               <Divider />
               <QALab />
               <Divider />

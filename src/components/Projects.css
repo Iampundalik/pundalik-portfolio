@@ -1,86 +1,133 @@
+/* Pulled up over the light Capabilities slab so the dark half returns with a
+   soft shoulder rather than a hard seam. */
 .proj {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 4rem;
+  position: relative;
+  z-index: 10;
+  background: var(--bg);
+  border-radius: var(--r-2xl) var(--r-2xl) 0 0;
+  margin-top: clamp(-3.5rem, -4vw, -2.5rem);
+  padding: clamp(3rem, 7vw, 6rem) 4vw 0;
+  --stack-top: clamp(5.5rem, 9vw, 8rem);
+}
+
+.proj__h2 {
+  font-size: clamp(3rem, 12vw, 160px);
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.proj__slot {
+  height: 85vh;
+  position: relative;
 }
 
 .proj__card {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
-  border: 1px solid var(--border);
-  border-radius: var(--r);
+  position: sticky;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  position: relative;
-  transition: border-color .3s, box-shadow .3s;
-}
-.proj__card:hover {
-  border-color: rgba(52, 211, 153, 0.3);
-  box-shadow: 0 32px 72px rgba(0, 0, 0, 0.45);
-}
-
-.proj__media {
-  aspect-ratio: 600 / 380;
-  background: linear-gradient(135deg, #0b0d12, #07080c);
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  overflow: hidden;
+  gap: clamp(1rem, 2vw, 1.6rem);
+  border: 2px solid rgba(215, 226, 234, 0.85);
+  border-radius: var(--r-2xl);
+  background: var(--bg);
+  padding: clamp(1rem, 2vw, 2rem);
+  max-width: 1240px;
+  margin: 0 auto;
+  transform-origin: top center;
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.5);
 }
 
-.proj__body { padding: 1.6rem 1.8rem; display: flex; flex-direction: column; gap: .75rem; }
-.proj__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
-.proj__name {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 1.1rem;
+/* --- Card head ----------------------------------------------------------- */
+
+.proj__head {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+  padding: 0 clamp(.5rem, 1.5vw, 1.5rem);
+}
+
+.proj__num {
+  font-family: var(--display-xl);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 7vw, 6rem);
+  line-height: .82;
   color: var(--white);
-  letter-spacing: -0.01em;
+  flex-shrink: 0;
 }
-.proj__gh {
+
+.proj__id { flex: 1; min-width: 0; }
+
+.proj__cat {
   font-family: var(--mono);
   font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: .06em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
   color: var(--accent);
-  background: rgba(52, 211, 153, 0.07);
-  border: 1px solid rgba(52, 211, 153, 0.18);
-  padding: .55rem .85rem;
-  border-radius: 100px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  white-space: nowrap;
-  transition: background .2s, border-color .2s;
 }
-.proj__gh:hover { background: rgba(52, 211, 153, 0.16); border-color: rgba(52, 211, 153, 0.35); }
 
-/* Employer-owned work: states plainly that there is no public source */
-.proj__note {
-  font-family: var(--mono);
-  font-size: .62rem;
+.proj__name {
+  font-family: var(--display-xl);
   font-weight: 500;
-  letter-spacing: .06em;
-  color: var(--dim);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  padding: .55rem .85rem;
-  border-radius: 100px;
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 2.2vw, 2rem);
+  line-height: 1.15;
+  color: var(--white);
+  margin-top: .35rem;
 }
-.proj__desc { font-size: .85rem; color: var(--dim2); line-height: 1.7; font-weight: 400; }
 
-@media (max-width: 960px) {
-  .proj { grid-template-columns: 1fr; }
+.proj__desc {
+  color: var(--dim2);
+  font-weight: 300;
+  line-height: 1.65;
+  font-size: clamp(.78rem, 1.15vw, .95rem);
+  max-width: 62ch;
+  margin-top: .6rem;
 }
-@media (max-width: 720px) {
-  .proj { gap: 1rem; margin-top: 2.5rem; }
-  .proj__body { padding: 1.1rem 1.2rem; gap: .6rem; }
-  .proj__name { font-size: .95rem; }
-  .proj__desc { font-size: .78rem; line-height: 1.6; }
-  .proj__gh { font-size: .63rem; padding: .5rem .8rem; }
+
+.proj__cta { flex-shrink: 0; }
+.proj__cta--locked {
+  cursor: default;
+  color: var(--dim2);
+  border-color: var(--border2);
+  font-size: .62rem;
+  letter-spacing: .12em;
+}
+.proj__cta--locked:hover { background: transparent; border-color: var(--border2); color: var(--dim2); }
+
+/* --- Shot grid ----------------------------------------------------------- */
+
+.proj__grid {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: clamp(.6rem, 1.2vw, 1rem);
+}
+.proj__col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(.6rem, 1.2vw, 1rem);
+  min-width: 0;
+}
+
+.proj__shot {
+  border-radius: clamp(20px, 3vw, 46px);
+  overflow: hidden;
+  background: #0d1016;
+  border: 1px solid var(--border);
+}
+.proj__shot > svg { width: 100%; height: 100%; display: block; }
+
+.proj__shot--sm { height: clamp(84px, 12vw, 165px); }
+.proj__shot--md { height: clamp(112px, 17vw, 248px); }
+.proj__shot--tall { height: 100%; min-height: clamp(204px, 30.2vw, 423px); }
+
+@media (max-width: 900px) {
+  .proj__head { flex-wrap: wrap; }
+  .proj__cta { order: 3; margin-left: auto; }
+}
+
+@media (max-width: 640px) {
+  .proj { border-radius: var(--r-xl) var(--r-xl) 0 0; --stack-top: 5rem; }
+  .proj__card { border-radius: var(--r-xl); border-width: 1.5px; }
+  .proj__slot { height: 78vh; }
+  .proj__desc { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .proj__cta { font-size: .6rem; padding: .55rem 1.1rem; }
 }

@@ -1,75 +1,36 @@
-import { motion } from 'framer-motion';
-import {
-  FlaskConical, Smartphone, Bot, Zap, Brain, Globe, Dices, Network, Rocket, Hash,
-} from 'lucide-react';
-import { Reveal } from './Reveal';
-import { SectionHead } from './SectionHead';
-import { Tilt } from './Tilt';
+import { FadeIn } from './FadeIn';
 import { skills } from '../data/portfolio';
 import './Skills.css';
 
-const ICONS: Record<string, React.ComponentType<{ size?: number; strokeWidth?: number }>> = {
-  flask: FlaskConical,
-  phone: Smartphone,
-  bot: Bot,
-  zap: Zap,
-  brain: Brain,
-  globe: Globe,
-  dice: Dices,
-  graph: Network,
-  rocket: Rocket,
-  count: Hash,
-};
+/** The count card is a metric, not a capability — it already sits in About. */
+const items = skills.filter(s => s.icon !== 'count');
 
 export function Skills() {
   return (
-    <section className="section" id="skills">
-      <SectionHead
-        label="01 EXPERTISE"
-        line1="WHAT I"
-        line2="KNOW"
-        sub="Full-spectrum quality engineering — manual and automated, mobile and web, from spec review through live production release."
-      />
+    <section className="cap" id="skills">
+      <div className="cap__inner">
+        <FadeIn y={40}>
+          <h2 className="cap__h2">Capabilities</h2>
+        </FadeIn>
 
-      <div className="skills">
-        {skills.map((s, i) => {
-          const Icon = ICONS[s.icon] || FlaskConical;
-          const isCount = s.icon === 'count';
-          return (
-            <Reveal key={i} delay={(i % 3) * 0.08} className={`skill-cell skill--c${s.span}`}>
-              <Tilt className="tilt">
-              <motion.div
-                className="skill"
-                whileHover={{ y: -4, borderColor: 'rgba(52,211,153,0.35)' }}
-                transition={{ duration: 0.25 }}
-              >
-                <span className="skill__topbar" />
-                {!isCount && (
-                  <div className="skill__icon">
-                    <Icon size={26} strokeWidth={1.6} />
-                  </div>
-                )}
-                {isCount ? (
-                  <>
-                    <div className="skill__big">{s.title.replace(/\s*YEARS?$/i, '')}</div>
-                    <div className="skill__big-l">{s.desc}</div>
-                  </>
-                ) : (
-                  <>
-                    <div className="skill__title">{s.title}</div>
-                    <div className="skill__desc">{s.desc}</div>
-                  </>
-                )}
-                <div className="tags">
-                  {s.tags.map((t, k) => (
-                    <span key={k} className={`tag ${t.tone}`}>{t.label}</span>
-                  ))}
+        <div className="cap__list">
+          {items.map((s, i) => (
+            <FadeIn key={s.title} delay={i * 0.1} y={24}>
+              <article className="cap__item">
+                <div className="cap__num">{String(i + 1).padStart(2, '0')}</div>
+                <div className="cap__body">
+                  <h3 className="cap__name">{s.title}</h3>
+                  <p className="cap__desc">{s.desc}</p>
+                  <ul className="cap__tags">
+                    {s.tags.map(t => (
+                      <li key={t.label} className={`cap__tag cap__tag--${t.tone}`}>{t.label}</li>
+                    ))}
+                  </ul>
                 </div>
-              </motion.div>
-              </Tilt>
-            </Reveal>
-          );
-        })}
+              </article>
+            </FadeIn>
+          ))}
+        </div>
       </div>
     </section>
   );

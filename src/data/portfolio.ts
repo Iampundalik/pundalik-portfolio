@@ -300,11 +300,42 @@ export const impactStats = [
 ];
 
 export const navLinks = [
-  { id: 'skills', label: 'Skills' },
+  { id: 'about', label: 'About' },
+  { id: 'skills', label: 'Capabilities' },
+  { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'stack', label: 'Stack' },
-  { id: 'projects', label: 'Projects' },
   { id: 'gallery', label: 'QA Lab' },
   { id: 'certs', label: 'Credentials' },
   { id: 'contact', label: 'Contact' },
 ];
+
+/** Split form of the resume figures, for the scroll-driven marquee tiles. */
+export const highlights = [
+  { v: '~40%', l: 'Regression coverage added' },
+  { v: '25 → 5', l: 'Minutes to log a defect' },
+  { v: '72%', l: 'Bug-detection gain' },
+  { v: '7+', l: 'Studio integrations' },
+  { v: '3.5 YRS', l: 'Shipping quality' },
+  { v: '1.5 YRS', l: 'Fully remote' },
+];
+
+/** Marquee word tiles — the tools the day-to-day actually runs on. */
+export const marqueeWords = [
+  { w: 'SELENIUM', c: 'WebDriver + Python' },
+  { w: 'CUCUMBER', c: 'Gherkin BDD' },
+  { w: 'JENKINS', c: 'CI/CD pipelines' },
+  { w: 'POSTMAN', c: 'REST validation' },
+  { w: 'ISTQB', c: 'CTFL certified' },
+  { w: 'GLI', c: 'Regulatory compliance' },
+  { w: 'TESTRAIL', c: 'Plans + coverage' },
+  { w: 'ALLURE', c: 'Reporting' },
+];
+
+/** Sticky project stack — category label and the mockups each card renders. */
+export const projectMeta: Record<string, { category: string; shots: [string, string, string] }> = {
+  'AI Defect-Intake Tool': { category: 'Internal Tool', shots: ['ai', 'terminal', 'browser'] },
+  'BDD Automation Suite': { category: 'Framework', shots: ['report', 'terminal', 'dashboard'] },
+  'SwagLabs Automation Framework': { category: 'Open Source', shots: ['browser', 'report', 'terminal'] },
+  'Flipkart DataScrapper': { category: 'Open Source', shots: ['terminal', 'dashboard', 'browser'] },
+};

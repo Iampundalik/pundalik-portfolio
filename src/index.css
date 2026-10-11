@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Kanit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -41,6 +41,17 @@
   --code: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
   --ui: 'Inter', system-ui, -apple-system, sans-serif;
   --display: 'Space Grotesk', 'Inter', sans-serif;
+  --display-xl: 'Kanit', 'Space Grotesk', 'Inter', sans-serif;
+
+  /* ---- Inverted (light) surface used by the Capabilities slab ---- */
+  --light: #f2f5f9;
+  --light2: #e4eaf1;
+  --ink: #06070a;
+  --ink-line: rgba(6, 7, 10, 0.14);
+
+  /* Radii for the oversized editorial cards */
+  --r-xl: 40px;
+  --r-2xl: 60px;
 }
 
 /* position:relative lets framer-motion's useScroll measure target offsets cleanly */
@@ -50,7 +61,7 @@ body {
   background: var(--bg);
   color: var(--white);
   font-family: var(--ui);
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -143,4 +154,72 @@ a:focus-visible, button:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ---------------------------------------------------------------------------
+   Editorial display type — the oversized headings that anchor each section.
+   Gradient runs top-to-bottom so the letterforms fade from slate into mint.
+   --------------------------------------------------------------------------- */
+.hero-heading {
+  font-family: var(--display-xl);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  background: linear-gradient(180deg, #59636f 0%, #b7f0d8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Gradient pill — the primary call to action, echoed in the hero and about slabs */
+.pill {
+  font-family: var(--mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  border-radius: 100px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+}
+.pill--grad {
+  color: #04241a;
+  padding: 1rem 3rem;
+  font-size: .78rem;
+  background: linear-gradient(123deg, #065f46 7%, #0f9b74 37%, #34d399 72%, #a7f3d0 100%);
+  box-shadow:
+    0 4px 4px rgba(16, 185, 129, 0.25),
+    4px 4px 12px #0f9b74 inset;
+  outline: 2px solid rgba(242, 245, 249, 0.9);
+  outline-offset: -3px;
+}
+.pill--grad:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 28px rgba(16, 185, 129, 0.4),
+    4px 4px 12px #0f9b74 inset;
+}
+.pill--ghost {
+  color: var(--white);
+  padding: .85rem 2.2rem;
+  font-size: .72rem;
+  background: transparent;
+  border: 2px solid rgba(242, 245, 249, 0.55);
+}
+.pill--ghost:hover {
+  background: rgba(242, 245, 249, 0.1);
+  border-color: var(--accent);
+  color: var(--mint);
+}
+
+@media (max-width: 720px) {
+  .pill--grad { padding: .85rem 2.1rem; font-size: .68rem; }
+  .pill--ghost { padding: .7rem 1.5rem; font-size: .66rem; }
 }

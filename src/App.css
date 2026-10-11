@@ -1,7 +1,9 @@
 .app {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  /* clip, not hidden — `hidden` would make this a scroll container and stop the
+     sticky project cards from pinning. */
+  overflow: clip;
 }
 
 .section {
