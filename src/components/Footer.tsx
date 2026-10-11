@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footer__l">
-        © {new Date().getFullYear()} Pundalik Mhamal · Software Development Engineer in Test
+        © {new Date().getFullYear()} Pundalik Mhamal · SDET @ Amazon (Quest Global)
         <br />
         {profile.location}
       </div>

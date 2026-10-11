@@ -1,8 +1,8 @@
 export const profile = {
   name: 'PUNDALIK MHAMAL',
   initials: 'PM',
-  role: 'Software Development Engineer in Test',
-  company: 'People Tech Technology',
+  role: 'SDET',
+  company: 'Amazon (Quest Global)',
   tagline: 'Test Automation · API & Integration · GenAI Evaluation',
   email: 'pundalik.mhamal.work@gmail.com',
   phone: '+91 98907 03905',
@@ -111,13 +111,13 @@ export const experience = [
   {
     period: 'Oct 2026 – Present',
     badges: [{ label: 'CURRENT', tone: 'live' as const }],
-    company: 'People Tech Technology',
-    role: 'Software Development Engineer in Test · Hyderabad',
+    company: 'Amazon (Quest Global)',
+    role: 'SDET — Software Development Engineer in Test · Hyderabad',
     bullets: [
-      'Joined in October 2026 as a Software Development Engineer in Test at People Tech Technology, a Quest Global company, placed with an Amazon engineering team.',
+      'SDET with an Amazon engineering team since October 2026, through Quest Global.',
       'Focus areas: test automation frameworks, API and integration testing, and quality gates in CI.',
     ],
-    foot: 'SDET · Test Automation · API & Integration · CI Quality Gates',
+    foot: 'SDET @ Amazon · Test Automation · API & Integration · CI Quality Gates',
     footTone: 'g' as const,
     accent: 'blue' as const,
   },

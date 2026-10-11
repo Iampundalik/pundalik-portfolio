@@ -1,6 +1,6 @@
 # Pundalik Mhamal — QA Engineer Portfolio
 
-Personal portfolio site for **Pundalik Mhamal**, Software Development Engineer in Test (SDET).
+Personal portfolio site for **Pundalik Mhamal**, SDET @ Amazon (Quest Global).
 
 Test Automation · API & Integration · GenAI Evaluation · ISTQB CTFL Certified.
 
@@ -27,7 +27,7 @@ No backend. Static site, deployable to any host (Vercel, Netlify, GitHub Pages, 
 - **Custom cursor** — spring-tracked ring (auto-disabled on touch)
 - **Editorial hero + About** — oversized display type, a magnetic 3D object and word-by-word animated text
 - **Capabilities index** — an inverted light slab listing six numbered capabilities
-- **Experience timeline** — People Tech Technology, Light & Wonder and ClaySys Technologies
+- **Experience timeline** — Amazon (Quest Global), Light & Wonder and ClaySys Technologies
 - **Projects** — a sticky, scroll-scaled card stack (BetSettings, BugLogger, an autonomous AI pipeline, BDD suite, SwagLabs)
 - **Tech stack** — 7 resume-backed categories (Playwright, Selenium, TypeScript, Python, REST/SOAP, Gemini API, LLM evaluation, Jenkins, AWS, etc.) with proficiency dots
 - **QA Lab gallery** — scrolling marquee of Allure reports, dashboards, browser sessions, terminals, and AI defect-intake mockups
@@ -109,4 +109,4 @@ For Vercel/Netlify, point the project at this repo — they auto-detect Vite.
 
 ---
 
-SDET · Test Automation · GenAI Evaluation.
+SDET @ Amazon (Quest Global) · Test Automation · GenAI Evaluation.

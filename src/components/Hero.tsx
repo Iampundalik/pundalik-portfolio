@@ -21,6 +21,11 @@ export function Hero() {
     <section className="hero" id="home" ref={ref}>
       <motion.div className="hero__stage" style={{ y, opacity }}>
         <div className="hero__headline">
+          <FadeIn delay={0.05} y={16}>
+            <p className="hero__role">
+              SDET @ Amazon <span className="hero__role-via">(Quest Global)</span>
+            </p>
+          </FadeIn>
           <FadeIn delay={0.15} y={40}>
             <h1 className="hero__h1 hero-heading">Hi, i&apos;m pundalik</h1>
           </FadeIn>

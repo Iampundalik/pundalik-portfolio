@@ -84,7 +84,7 @@ export function Loading({ onDone }: Props) {
 
           <div className="loader__marquee">
             <Marquee speed={60} gradient={false}>
-              <span>SDET</span>
+              <span>SDET @ AMAZON</span>
               <span className="loader__diamond">◆</span>
               <span>TEST AUTOMATION</span>
               <span className="loader__diamond">◆</span>
@@ -94,7 +94,7 @@ export function Loading({ onDone }: Props) {
               <span className="loader__diamond">◆</span>
               <span>ISTQB CERTIFIED</span>
               <span className="loader__diamond">◆</span>
-              <span>SDET</span>
+              <span>SDET @ AMAZON</span>
               <span className="loader__diamond">◆</span>
               <span>TEST AUTOMATION</span>
               <span className="loader__diamond">◆</span>
