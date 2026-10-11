@@ -114,7 +114,7 @@ export const experience = [
     company: 'People Tech Technology',
     role: 'Software Development Engineer in Test · Hyderabad',
     bullets: [
-      'Joined in October 2026 as a Software Development Engineer in Test at People Tech Technology, a Quest Global company.',
+      'Joined in October 2026 as a Software Development Engineer in Test at People Tech Technology, a Quest Global company, placed with an Amazon engineering team.',
       'Focus areas: test automation frameworks, API and integration testing, and quality gates in CI.',
     ],
     foot: 'SDET · Test Automation · API & Integration · CI Quality Gates',
