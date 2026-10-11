@@ -1,30 +1,23 @@
 export const profile = {
   name: 'PUNDALIK MHAMAL',
   initials: 'PM',
-  role: 'Senior Associate QA Engineer',
-  company: 'Light & Wonder',
-  tagline: 'iGaming · Automation · Mobile & Web',
+  role: 'Software Development Engineer in Test',
+  company: 'People Tech Technology',
+  tagline: 'Test Automation · API & Integration · GenAI Evaluation',
   email: 'pundalik.mhamal.work@gmail.com',
   phone: '+91 98907 03905',
   github: 'https://github.com/Iampundalik',
   linkedin: 'https://linkedin.com/in/iampundalik',
-  location: 'Goa, India · IST (UTC+5:30) · Remote / Hybrid / Open to Relocation',
+  location: 'Hyderabad, India · IST (UTC+5:30)',
   summary:
-    'ISTQB-certified QA Engineer with 3.5 years across live, real-money gaming platforms and enterprise software — including 1.5 years fully remote across time zones. Manual and automation: functional, regression, integration and compatibility cycles on Android, iOS and web, a BDD suite wired into Jenkins CI/CD, and backend REST/SQL validation.',
+    'SDET with 3.5+ years building test automation and owning quality on multi-service platforms — most recently a GLI-regulated, AWS-hosted casino platform where an escaped defect is a compliance failure. Builds frameworks from scratch in Playwright + TypeScript and Python + Selenium, runs them in CI as build gates, and builds and tests LLM-powered services.',
 };
 
 export const metrics = [
-  { v: '3.5+', l: 'Years XP' },
-  { v: 'ISTQB', l: 'CTFL Certified' },
-  { v: '7+', l: 'Studio Integrations' },
-  { v: '1.5Y', l: 'Fully Remote' },
-];
-
-export const tickerItems = [
-  'Selenium WebDriver', 'Cucumber / Gherkin', 'Python', 'Pytest', 'Allure Reporting',
-  'Android & iOS QA', 'BrowserStack', 'Postman', 'RestAssured', 'REST API',
-  'Jenkins CI/CD', 'Azure DevOps', 'SQL / SSMS', 'JIRA', 'TestRail',
-  'GLI Compliance', 'ISTQB CTFL', 'Soak Testing', 'Live Production QA', 'Agile Scrum',
+  { v: '3.5+', l: 'Years building quality' },
+  { v: 'ISTQB', l: 'CTFL certified' },
+  { v: '7+', l: 'Product lines tested' },
+  { v: '25→5', l: 'Min to log a defect' },
 ];
 
 export type SkillCard = {
@@ -38,133 +31,126 @@ export type SkillCard = {
 
 export const skills: SkillCard[] = [
   {
-    icon: 'flask',
-    title: 'Manual & Functional Testing',
-    desc: 'End-to-end ownership of functional, regression, integration, compatibility and soak cycles on live real-money titles. Test plans, coverage matrices and exploratory charters authored in TestRail from product and math specs — with QA input at spec review, before implementation.',
+    icon: 'bot',
+    title: 'Test Automation Frameworks',
+    desc: 'Built a Playwright + TypeScript framework from scratch and co-built a Python + Selenium + Cucumber/BDD suite. Layered design with page objects and typed modules, UI and API checks in one suite, unit tests on the core logic, and Allure and HTML reports with the evidence attached.',
     tags: [
-      { label: 'Test Planning', tone: 'g' }, { label: 'Regression', tone: 'g' },
-      { label: 'Integration', tone: 'g' }, { label: 'Compatibility', tone: 'g' },
-      { label: 'Soak Testing', tone: 'g' }, { label: 'Exploratory', tone: 'g' },
-      { label: 'Live Production QA', tone: 'g' }, { label: 'Release Validation', tone: 'g' },
+      { label: 'Playwright', tone: 'g' }, { label: 'TypeScript', tone: 'g' },
+      { label: 'Selenium', tone: 'g' }, { label: 'PyTest', tone: 'g' },
+      { label: 'Cucumber / BDD', tone: 'g' }, { label: 'Page Object Model', tone: 'g' },
     ],
     span: 8,
   },
   {
     icon: 'count',
     title: '3.5+ YEARS',
-    desc: 'Years shipping quality',
+    desc: 'Years building quality',
     tags: [
-      { label: 'iGaming', tone: 'b' }, { label: 'RPA', tone: 'b' },
+      { label: 'SDET', tone: 'b' }, { label: 'iGaming', tone: 'b' },
       { label: 'Enterprise', tone: 'b' },
     ],
     span: 4,
   },
   {
-    icon: 'bot',
-    title: 'BDD Automation Framework',
-    desc: 'Selenium + Cucumber + Gherkin + Python with Allure reporting, integrated into Jenkins CI/CD. Built and maintained in-house — expanded regression coverage ~40% and freed manual effort for deeper exploratory work.',
-    tags: [
-      { label: 'Selenium', tone: 'b' }, { label: 'Cucumber', tone: 'b' },
-      { label: 'Python', tone: 'b' }, { label: 'Pytest', tone: 'b' },
-      { label: 'Allure', tone: 'b' },
-    ],
-    span: 6,
-  },
-  {
-    icon: 'phone',
-    title: 'Mobile & Web QA',
-    desc: 'Android and iOS clients alongside web — cross-device and OS-version compatibility, responsive behaviour, and client–server state consistency. BrowserStack for device coverage, Fiddler for network inspection.',
-    tags: [
-      { label: 'Android', tone: 'g' }, { label: 'iOS', tone: 'g' },
-      { label: 'BrowserStack', tone: 'g' }, { label: 'Fiddler', tone: 'g' },
-      { label: 'Responsive', tone: 'g' },
-    ],
-    span: 6,
-  },
-  {
     icon: 'zap',
-    title: 'API & Database Validation',
-    desc: 'Backend REST validation with Postman and RestAssured. Database state verified through SQL / SSMS for transactional correctness and client–server consistency.',
+    title: 'API & Integration Testing',
+    desc: 'REST and SOAP services and the flows between them — sync and async requests, parallel calls with timeouts and fallback, and the failed, duplicate and retried transactions that only surface across service boundaries. Backend state verified directly in SQL.',
     tags: [
-      { label: 'Postman', tone: 'o' }, { label: 'RestAssured', tone: 'o' },
-      { label: 'REST API', tone: 'o' }, { label: 'SQL / SSMS', tone: 'o' },
+      { label: 'REST', tone: 'o' }, { label: 'SOAP', tone: 'o' },
+      { label: 'REST Assured', tone: 'o' }, { label: 'Postman', tone: 'o' },
+      { label: 'Swagger', tone: 'o' }, { label: 'SQL', tone: 'o' },
     ],
-    span: 4,
+    span: 6,
   },
   {
     icon: 'brain',
-    title: 'AI-Assisted QA Tooling',
-    desc: 'Built and rolled out an AI-assisted defect-intake tool — Spring Boot + Gemini API + Jira REST v2 — that cut the team’s bug-logging time from roughly 25 minutes to under 5.',
+    title: 'GenAI & Agentic Systems',
+    desc: 'Built and maintained BugLogger, an agentic LLM service on the Gemini API wired into Jira, so I know first-hand how non-deterministic output misbehaves. Familiar with evaluating it through rubric and property-based checks, golden datasets, LLM-as-judge scoring and regression runs on every prompt change.',
     tags: [
-      { label: 'Spring Boot', tone: 'b' }, { label: 'Gemini API', tone: 'b' },
-      { label: 'Jira REST v2', tone: 'b' }, { label: 'Java', tone: 'b' },
+      { label: 'Gemini API', tone: 'b' }, { label: 'LLM Evaluation', tone: 'b' },
+      { label: 'Golden Datasets', tone: 'b' }, { label: 'Spring Boot', tone: 'b' },
     ],
-    span: 4,
-  },
-  {
-    icon: 'dice',
-    title: 'iGaming Domain',
-    desc: 'Casino game QA across 7+ third-party studio integrations. Real-money platforms, math spec validation, GLI regulatory compliance testing.',
-    tags: [
-      { label: 'GLI Compliance', tone: 'o' }, { label: 'Real-Money', tone: 'o' },
-      { label: 'Math Specs', tone: 'o' },
-    ],
-    span: 4,
+    span: 6,
   },
   {
     icon: 'rocket',
-    title: 'CI/CD & Build Ownership',
-    desc: 'Jenkins and Azure DevOps pipelines. Independently deploys and debugs client, settings and server builds without developer dependency — critical for unblocking work across time-zone gaps.',
+    title: 'CI/CD & Quality Gates',
+    desc: 'Suites that run in Jenkins and GitHub Actions as build gates, with same-day failure triage so the pipeline stays green and releases keep moving. At home in AWS-hosted environments and on Linux, with a working base in Docker and Kubernetes.',
     tags: [
-      { label: 'Jenkins', tone: 'w' }, { label: 'Azure DevOps', tone: 'w' },
-      { label: 'Git', tone: 'w' }, { label: 'Build Deploy', tone: 'w' },
+      { label: 'Jenkins', tone: 'w' }, { label: 'GitHub Actions', tone: 'w' },
+      { label: 'Git', tone: 'w' }, { label: 'AWS', tone: 'w' },
+      { label: 'Linux', tone: 'w' }, { label: 'Docker', tone: 'w' },
     ],
     span: 6,
   },
   {
-    icon: 'globe',
-    title: 'Remote-Proven Delivery',
-    desc: '1.5 years working fully remote across time zones — self-directed sprint execution, async written updates, no on-site supervision. Remote delivery is proven, not assumed.',
+    icon: 'flask',
+    title: 'Strategy, Regression & Root Cause',
+    desc: 'Test strategy and plans agreed with developers before build, regression suites designed for coverage rather than count, and root cause chased through logs, configuration and data. Defect lifecycle in Jira, TestRail and Azure DevOps, on ISTQB test-design foundations.',
     tags: [
-      { label: 'Async Comms', tone: 'w' }, { label: 'Self-Directed', tone: 'w' },
-      { label: 'Distributed Teams', tone: 'w' },
+      { label: 'Test Strategy', tone: 'g' }, { label: 'Regression Design', tone: 'g' },
+      { label: 'Root-Cause Analysis', tone: 'g' }, { label: 'Jira', tone: 'g' },
+      { label: 'TestRail', tone: 'g' },
     ],
     span: 6,
+  },
+  {
+    icon: 'dice',
+    title: 'Regulated, Real-Money Platforms',
+    desc: 'Over two years on a GLI-certified, AWS-hosted casino platform where an escaped defect is a compliance failure — 7+ product lines across web, Android and iOS, with game configuration verified against live servers before release.',
+    tags: [
+      { label: 'GLI Compliance', tone: 'o' }, { label: 'Real-Money', tone: 'o' },
+      { label: 'Web', tone: 'o' }, { label: 'Android', tone: 'o' },
+      { label: 'iOS', tone: 'o' },
+    ],
+    span: 4,
   },
 ];
 
 export const experience = [
   {
-    period: 'July 2024 – Present',
-    badges: [{ label: 'CURRENT', tone: 'live' as const }, { label: 'PROMOTED', tone: 'promo' as const }],
-    company: 'Light & Wonder',
-    role: 'Senior Associate QA Engineer — Casino Game Platforms · Pune (Hybrid)',
+    period: 'Oct 2026 – Present',
+    badges: [{ label: 'CURRENT', tone: 'live' as const }],
+    company: 'People Tech Technology',
+    role: 'Software Development Engineer in Test · Hyderabad',
     bullets: [
-      'Own end-to-end QA for live, real-money titles from 7+ third-party studio integrations — functional, regression, integration, compatibility and soak testing across Android, iOS and web clients.',
-      'Build and maintain a BDD automation framework (Selenium + Cucumber + Gherkin + Python, Allure reporting) integrated into Jenkins CI/CD — expanded regression coverage ~40% and freed manual effort for deeper exploratory work.',
-      'Author test plans, coverage matrices and exploratory charters in TestRail from product and math specifications, contributing QA input at spec review before implementation.',
-      'Validate backend REST APIs (Postman, RestAssured) and database state (SQL / SSMS) for transactional correctness and client–server state consistency.',
-      'Log and track defects in JIRA with precise reproduction steps, severity and evidence; drive triage, re-test and closure with distributed engineering teams.',
-      'Independently deploy and debug client, settings and server builds without developer dependency — critical for unblocking work across time-zone gaps.',
-      'Built and rolled out an AI-assisted defect-intake tool (Spring Boot + Gemini API + Jira REST v2) that cut the team’s bug-logging time from ~25 minutes to under 5.',
+      'Joined in October 2026 as a Software Development Engineer in Test at People Tech Technology, a Quest Global company.',
+      'Focus areas: test automation frameworks, API and integration testing, and quality gates in CI.',
     ],
-    foot: 'Selenium · Cucumber BDD · Jenkins · GLI Compliance · Android / iOS · Gemini API',
+    foot: 'SDET · Test Automation · API & Integration · CI Quality Gates',
     footTone: 'g' as const,
     accent: 'blue' as const,
   },
   {
+    period: 'Jul 2024 – Sep 2026',
+    badges: [{ label: 'PROMOTED', tone: 'promo' as const }],
+    company: 'Light & Wonder',
+    role: 'Senior Associate QA Engineer — iGaming · Pune (Hybrid)',
+    bullets: [
+      'Designed and built the BetSettings Automation Tool from scratch in Playwright + TypeScript — page objects and typed modules for parsing, calculation and the API client. It reads configuration from GitHub, calls the live game server and checks the response, cutting a 5–7 minute manual check per currency to about 10–15 seconds.',
+      'Probed several game-server environments in parallel with short timeouts and ordered fallback, and compared EU and US configuration across currencies to flag mismatches before release.',
+      'Co-built a Python + Selenium + Cucumber/BDD framework with API checks, run in Jenkins as a build gate; triaged failures quickly to keep the pipeline green and releases moving.',
+      'Tested web clients and REST/SOAP services end to end across 7+ product lines on a GLI-certified, AWS-hosted platform, covering backend state in SQL and failed, duplicate and retried transactions between services.',
+      'Built BugLogger, an agentic LLM service (Spring Boot + Gemini API + Jira REST API) that generates structured defect reports — logging time fell from about 25 minutes to under 5, and the team used it daily.',
+      'Reviewed specifications and test approach with developers before build, drove root cause through logs, configuration and data, and mentored junior QAs on test design.',
+      'Promoted to Senior Associate in March 2026; recognised with Team of the Month (iGaming) and Game of the Quarter.',
+    ],
+    foot: 'Playwright · TypeScript · Selenium BDD · Jenkins · REST / SOAP · Gemini API',
+    footTone: 'g' as const,
+    accent: 'green' as const,
+  },
+  {
     period: 'Feb 2023 – Jul 2024',
     badges: [{ label: '100% REMOTE', tone: 'promo' as const }],
-    company: 'Claysys Technologies',
+    company: 'ClaySys Technologies',
     role: 'Software Test Engineer — RPA Product Team · Goa (Fully Remote)',
     bullets: [
-      'Delivered manual functional and regression testing for an enterprise RPA product across web and desktop as a fully remote team member — self-directed sprint execution, async written updates, no on-site supervision.',
-      'Contributed to a 72% improvement in bug-detection efficiency through structured defect reporting and reproducible test documentation in Azure DevOps.',
-      'Built API test suites in Postman and RestAssured; verified backend responses and data integrity with SQL.',
-      'Participated in daily scrums and sprint planning, keeping QA aligned with delivery cycles across a distributed team.',
-      'Resolved client incident tickets promptly and effectively, maintaining consistently high satisfaction scores.',
+      'Tested an enterprise automation product end to end, including multi-step workflows, integrations, exception handling, retries and recovery in long-running processes.',
+      'Built automated validation flows in Python, Selenium and UiPath, contributing to a 72% improvement in tracked work-quality metrics.',
+      'Built API test suites in Postman and REST Assured, and verified backend responses and data integrity with SQL.',
+      'Reproduced customer-reported issues, drove root cause with developers and turned recurring failures into regression tests.',
     ],
-    foot: 'Azure DevOps · RPA · Postman · RestAssured · 72% Bug-Detection Gain',
+    foot: 'Python · Selenium · UiPath · REST Assured · Azure DevOps',
     footTone: 'b' as const,
     accent: 'green' as const,
   },
@@ -176,81 +162,109 @@ export const stack: { cat: string; tools: Tool[] }[] = [
     cat: 'Test Automation',
     tools: [
       { name: 'Selenium WebDriver', level: 'e' }, { name: 'Cucumber / Gherkin BDD', level: 'e' },
-      { name: 'Python', level: 'e' }, { name: 'Framework Design', level: 'e' },
-      { name: 'Pytest', level: 'p' }, { name: 'RestAssured', level: 'p' },
-      { name: 'Allure Reporting', level: 'p' }, { name: 'Playwright', level: 'l' },
-      { name: 'Appium (Mobile)', level: 'l' }, { name: 'Robot Framework', level: 'l' },
+      { name: 'Page Object Model', level: 'e' }, { name: 'Framework Design', level: 'e' },
+      { name: 'Playwright', level: 'p' }, { name: 'PyTest', level: 'p' },
+      { name: 'REST Assured', level: 'p' }, { name: 'Unit Testing', level: 'p' },
+      { name: 'Allure Reporting', level: 'p' }, { name: 'Appium (Mobile)', level: 'l' },
     ],
   },
   {
-    cat: 'Mobile & Web QA',
+    cat: 'Languages',
     tools: [
-      { name: 'Android', level: 'e' }, { name: 'iOS', level: 'e' },
-      { name: 'OS-Version Compatibility', level: 'e' }, { name: 'Client–Server Behaviour', level: 'e' },
-      { name: 'BrowserStack', level: 'p' }, { name: 'Responsive Testing', level: 'p' },
-      { name: 'Fiddler / Network', level: 'p' }, { name: 'Chrome DevTools', level: 'p' },
+      { name: 'Python', level: 'e' }, { name: 'TypeScript', level: 'p' },
+      { name: 'Java (Spring Boot)', level: 'p' }, { name: 'SQL', level: 'p' },
+      { name: 'JavaScript', level: 'p' }, { name: 'DSA in Python', level: 'p' },
     ],
   },
   {
-    cat: 'Test Types',
+    cat: 'API & Integration',
     tools: [
-      { name: 'Functional', level: 'e' }, { name: 'Regression', level: 'e' },
-      { name: 'Integration', level: 'e' }, { name: 'Compatibility', level: 'e' },
-      { name: 'Exploratory', level: 'e' }, { name: 'Live Production QA', level: 'e' },
-      { name: 'Release Validation', level: 'e' }, { name: 'Soak', level: 'p' },
-      { name: 'Performance', level: 'p' },
+      { name: 'REST APIs', level: 'e' }, { name: 'Postman', level: 'e' },
+      { name: 'SOAP', level: 'p' }, { name: 'Swagger / OpenAPI', level: 'p' },
+      { name: 'Service-to-Service Flows', level: 'p' }, { name: 'Async, Retry & Fallback', level: 'p' },
     ],
   },
   {
-    cat: 'CI/CD, API & Data',
+    cat: 'GenAI & LLM',
     tools: [
-      { name: 'Jenkins', level: 'e' }, { name: 'Azure DevOps', level: 'e' },
-      { name: 'Git / Bitbucket', level: 'e' }, { name: 'Postman', level: 'e' },
-      { name: 'REST API Validation', level: 'e' }, { name: 'SQL / SSMS', level: 'p' },
-      { name: 'Swagger / OpenAPI', level: 'p' }, { name: 'GitHub Actions', level: 'l' },
-      { name: 'Docker', level: 'l' },
+      { name: 'Gemini API', level: 'p' }, { name: 'Agentic Services', level: 'p' },
+      { name: 'LLM Evaluation', level: 'l' }, { name: 'Golden Datasets', level: 'l' },
+      { name: 'LLM-as-Judge', level: 'l' }, { name: 'Prompt Regression', level: 'l' },
     ],
   },
   {
-    cat: 'Process & Tracking',
+    cat: 'CI/CD & Cloud',
     tools: [
-      { name: 'Agile / Scrum', level: 'e' }, { name: 'JIRA', level: 'e' },
-      { name: 'TestRail', level: 'e' }, { name: 'Test Strategy Authoring', level: 'e' },
-      { name: 'Defect Lifecycle', level: 'e' }, { name: 'SDLC / STLC', level: 'e' },
-      { name: 'Confluence', level: 'p' }, { name: 'GLI Compliance', level: 'p' },
+      { name: 'Jenkins', level: 'e' }, { name: 'Git / GitHub', level: 'e' },
+      { name: 'GitHub Actions', level: 'p' }, { name: 'AWS-hosted Environments', level: 'p' },
+      { name: 'Linux', level: 'p' }, { name: 'Docker', level: 'l' },
+      { name: 'Kubernetes', level: 'l' },
     ],
   },
   {
-    cat: 'Engineering & AI',
+    cat: 'Strategy & Process',
     tools: [
-      { name: 'Spring Boot', level: 'p' }, { name: 'Java REST Services', level: 'p' },
-      { name: 'Gemini API (LLM)', level: 'p' }, { name: 'AI-Assisted Testing', level: 'p' },
-      { name: 'TypeScript', level: 'p' }, { name: 'DSA', level: 'p' },
-      { name: 'Linux', level: 'p' }, { name: 'Next.js', level: 'l' },
-      { name: 'C / C++', level: 'l' },
+      { name: 'Test Strategy & Plans', level: 'e' }, { name: 'Regression Suite Design', level: 'e' },
+      { name: 'Root-Cause Analysis', level: 'e' }, { name: 'Jira', level: 'e' },
+      { name: 'TestRail', level: 'e' }, { name: 'Agile / Scrum', level: 'e' },
+      { name: 'Azure DevOps', level: 'p' }, { name: 'GLI Compliance', level: 'p' },
+    ],
+  },
+  {
+    cat: 'Platforms & Devices',
+    tools: [
+      { name: 'Web Clients', level: 'e' }, { name: 'Android', level: 'e' },
+      { name: 'iOS', level: 'e' }, { name: 'BrowserStack', level: 'p' },
+      { name: 'Fiddler / Network', level: 'p' }, { name: 'UiPath RPA', level: 'p' },
     ],
   },
 ];
 
-/** `href` omitted = employer-owned work with no public source to link to. */
+/**
+ * `href` omitted = no public source to link to; `note` explains why instead.
+ * Internal work is described at the level of the public resume — no repo,
+ * environment or file names.
+ */
 export const projects = [
   {
-    name: 'AI Defect-Intake Tool',
-    desc: 'Shipped in production at Light & Wonder. A Spring Boot service wired to the Gemini API and Jira REST v2 that turns raw defect notes into structured, reproducible tickets — cutting the team’s bug-logging time from ~25 minutes to under 5.',
+    name: 'BetSettings Automation Tool',
+    desc: 'A one-command tool built from scratch in Playwright + TypeScript. It reads a game’s configuration from GitHub, calculates the default, minimum and maximum bet for every currency, then calls each game server’s API to confirm the live game returns the same values — probing environments in parallel with short timeouts and fallback, and flagging EU vs US configuration mismatches. A 5–7 minute manual check per currency now takes about 10–15 seconds for all of them, and its first real runs caught genuine misconfigurations.',
+    tags: [
+      { label: 'Playwright', tone: 'g' as const }, { label: 'TypeScript', tone: 'g' as const },
+      { label: 'API Testing', tone: 'g' as const }, { label: 'Parallel Requests', tone: 'g' as const },
+    ],
+    note: 'Internal · Light & Wonder',
+    accent: '#34d399',
+    image: 'terminal',
+  },
+  {
+    name: 'BugLogger',
+    desc: 'An agentic, LLM-powered defect-reporting service built on Spring Boot, the Gemini API and the Jira REST API. It turns rough notes into structured, reproducible Jira reports — logging time fell from about 25 minutes to under 5, and the team used it daily. Living with its non-deterministic output is what pulled me into LLM evaluation.',
     tags: [
       { label: 'Spring Boot', tone: 'o' as const }, { label: 'Gemini API', tone: 'o' as const },
-      { label: 'Jira REST v2', tone: 'o' as const }, { label: 'Java', tone: 'o' as const },
+      { label: 'Jira REST API', tone: 'o' as const }, { label: 'Java', tone: 'o' as const },
     ],
     note: 'Internal · Light & Wonder',
     accent: '#fbc964',
     image: 'ai',
   },
   {
+    name: 'Autonomous AI Video Pipeline',
+    desc: 'An unattended pipeline that runs on a schedule in GitHub Actions: it pulls sources, writes a script with an LLM, synthesises voiceover, renders a captioned video with ffmpeg and publishes through the YouTube Data API. A layer of autonomous agents reviews performance and proposes tuning — but every value they emit is validated and clamped in code before it can reach the pipeline. Never let a model write straight to production config.',
+    tags: [
+      { label: 'Python', tone: 'b' as const }, { label: 'LLM APIs', tone: 'b' as const },
+      { label: 'GitHub Actions', tone: 'b' as const }, { label: 'ffmpeg', tone: 'b' as const },
+    ],
+    note: 'Personal · private repo',
+    accent: '#7dd3fc',
+    image: 'dashboard',
+  },
+  {
     name: 'BDD Automation Suite',
-    desc: 'Selenium + Cucumber + Gherkin + Python framework with Allure reporting, integrated into Jenkins CI/CD. Page Object architecture and living documentation — expanded regression coverage by roughly 40%.',
+    desc: 'Co-built a Python + Selenium + Cucumber/BDD framework with API checks and Allure reporting, run in Jenkins as a build gate — with failures triaged quickly so the pipeline stayed green and releases kept moving.',
     tags: [
       { label: 'Selenium', tone: 'g' as const }, { label: 'Cucumber', tone: 'g' as const },
-      { label: 'Python', tone: 'g' as const }, { label: 'Allure', tone: 'g' as const },
+      { label: 'Python', tone: 'g' as const }, { label: 'Jenkins', tone: 'g' as const },
     ],
     note: 'Internal · Light & Wonder',
     accent: '#34d399',
@@ -258,31 +272,20 @@ export const projects = [
   },
   {
     name: 'SwagLabs Automation Framework',
-    desc: 'E2E test automation for the SauceDemo storefront — Python + Selenium with Behave BDD, a Page Object layer and HTML reporting. Feature files cover the auth, cart and checkout journeys.',
+    desc: 'End-to-end web framework for the SauceDemo storefront — Python + Selenium with PyTest and Behave BDD, a Page Object layer, config-driven test data, parallel runs and HTML reports.',
     tags: [
       { label: 'Python', tone: 'g' as const }, { label: 'Selenium', tone: 'g' as const },
-      { label: 'Behave BDD', tone: 'g' as const }, { label: 'POM', tone: 'g' as const },
+      { label: 'PyTest', tone: 'g' as const }, { label: 'POM', tone: 'g' as const },
     ],
     href: 'https://github.com/Iampundalik/SauceDemo-Automation_Framework',
     accent: '#34d399',
-    image: 'dashboard',
-  },
-  {
-    name: 'Flipkart DataScrapper',
-    desc: 'Web scraping automation built on Selenium WebDriver. Structured product data extraction with error handling, anti-detection patterns and clean output.',
-    tags: [
-      { label: 'Python', tone: 'b' as const }, { label: 'Selenium', tone: 'b' as const },
-      { label: 'Web Scraping', tone: 'b' as const },
-    ],
-    href: 'https://github.com/Iampundalik/Testing-Projects',
-    accent: '#7dd3fc',
-    image: 'terminal',
+    image: 'report',
   },
 ];
 
 export const certs = [
-  { name: 'ISTQB Certified Tester — Foundation Level', date: 'CTFL · ACTIVE', star: true },
-  { name: 'API Automation — RestAssured', date: 'APRIL 2024', star: false },
+  { name: 'ISTQB Certified Tester — Foundation Level (CTFL 4.0)', date: 'CERTIFIED · ACTIVE', star: true },
+  { name: 'API Automation — REST Assured', date: 'APRIL 2024', star: false },
   { name: 'Agile & Scrum Fundamentals', date: 'FEB – MAR 2023', star: false },
   { name: 'Python Basics', date: 'JUN – SEP 2022', star: false },
   { name: 'Bachelor of Engineering — Goa University', date: 'GOA, INDIA · 2018 – 2022', star: false },
@@ -291,12 +294,12 @@ export const certs = [
 
 /** Resume-backed outcomes — every figure here traces to a real delivery. */
 export const impactStats = [
-  '~40% REGRESSION COVERAGE ADDED',
-  '25 MIN → 5 MIN BUG LOGGING',
-  '72% BUG-DETECTION GAIN',
-  '7+ STUDIO INTEGRATIONS',
-  '3.5 YEARS SHIPPING QUALITY',
-  '1.5 YEARS FULLY REMOTE',
+  '15 SEC ALL-CURRENCY BET CHECK',
+  '25 MIN → 5 MIN DEFECT LOGGING',
+  '7+ PRODUCT LINES TESTED',
+  '72% WORK-QUALITY GAIN',
+  '3.5+ YEARS BUILDING QUALITY',
+  'ISTQB CTFL CERTIFIED',
 ];
 
 export const navLinks = [
@@ -312,30 +315,31 @@ export const navLinks = [
 
 /** Split form of the resume figures, for the scroll-driven marquee tiles. */
 export const highlights = [
-  { v: '~40%', l: 'Regression coverage added' },
+  { v: '15 SEC', l: 'All-currency bet check — was 5–7 min each' },
   { v: '25 → 5', l: 'Minutes to log a defect' },
-  { v: '72%', l: 'Bug-detection gain' },
-  { v: '7+', l: 'Studio integrations' },
-  { v: '3.5 YRS', l: 'Shipping quality' },
-  { v: '1.5 YRS', l: 'Fully remote' },
+  { v: '7+', l: 'Product lines tested end to end' },
+  { v: '72%', l: 'Tracked work-quality gain' },
+  { v: '3.5+ YRS', l: 'Building test automation' },
+  { v: 'CTFL', l: 'ISTQB certified' },
 ];
 
 /** Marquee word tiles — the tools the day-to-day actually runs on. */
 export const marqueeWords = [
+  { w: 'PLAYWRIGHT', c: 'TypeScript' },
   { w: 'SELENIUM', c: 'WebDriver + Python' },
+  { w: 'GEMINI', c: 'Agentic LLM services' },
+  { w: 'JENKINS', c: 'CI build gates' },
+  { w: 'REST ASSURED', c: 'API automation' },
   { w: 'CUCUMBER', c: 'Gherkin BDD' },
-  { w: 'JENKINS', c: 'CI/CD pipelines' },
-  { w: 'POSTMAN', c: 'REST validation' },
   { w: 'ISTQB', c: 'CTFL certified' },
-  { w: 'GLI', c: 'Regulatory compliance' },
-  { w: 'TESTRAIL', c: 'Plans + coverage' },
   { w: 'ALLURE', c: 'Reporting' },
 ];
 
 /** Sticky project stack — category label and the mockups each card renders. */
 export const projectMeta: Record<string, { category: string; shots: [string, string, string] }> = {
-  'AI Defect-Intake Tool': { category: 'Internal Tool', shots: ['ai', 'terminal', 'browser'] },
-  'BDD Automation Suite': { category: 'Framework', shots: ['report', 'terminal', 'dashboard'] },
+  'BetSettings Automation Tool': { category: 'Framework · Built from scratch', shots: ['terminal', 'report', 'browser'] },
+  'BugLogger': { category: 'Agentic LLM Service', shots: ['ai', 'terminal', 'dashboard'] },
+  'Autonomous AI Video Pipeline': { category: 'Personal Project', shots: ['terminal', 'ai', 'dashboard'] },
+  'BDD Automation Suite': { category: 'Framework · CI Build Gate', shots: ['report', 'terminal', 'browser'] },
   'SwagLabs Automation Framework': { category: 'Open Source', shots: ['browser', 'report', 'terminal'] },
-  'Flipkart DataScrapper': { category: 'Open Source', shots: ['terminal', 'dashboard', 'browser'] },
 };

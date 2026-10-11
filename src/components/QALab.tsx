@@ -13,14 +13,14 @@ const galleryRow1 = [
   { kind: 'dashboard', label: 'Quality Dashboard', node: <MockDashboard /> },
   { kind: 'browser', label: 'E2E Browser Test', node: <MockBrowser /> },
   { kind: 'terminal', label: 'CI Pipeline', node: <MockTerminal /> },
-  { kind: 'ai', label: 'AI Defect Intake', node: <MockAI /> },
+  { kind: 'ai', label: 'BugLogger', node: <MockAI /> },
 ];
 
 const galleryRow2 = [
   { kind: 'browser', label: 'Cross-Browser Run', node: <MockBrowser /> },
-  { kind: 'terminal', label: 'pytest CLI', node: <MockTerminal /> },
+  { kind: 'terminal', label: 'Playwright Run', node: <MockTerminal /> },
   { kind: 'report', label: 'Coverage Report', node: <MockTestReport /> },
-  { kind: 'ai', label: 'Gemini Intake Flow', node: <MockAI /> },
+  { kind: 'ai', label: 'LLM Defect Reports', node: <MockAI /> },
   { kind: 'dashboard', label: 'Sprint Metrics', node: <MockDashboard /> },
 ];
 
@@ -51,7 +51,7 @@ export function QALab() {
         label="05 QA LAB"
         line1="EVIDENCE,"
         line2="SHIPPED"
-        sub="A snapshot of the artefacts I work with daily — Allure reports, automation runs, coverage dashboards and AI-assisted defect analysis."
+        sub="A snapshot of the artefacts I work with daily — Allure reports, automation runs, coverage dashboards and LLM-powered defect reporting."
       />
 
       <div className="lab__rows">

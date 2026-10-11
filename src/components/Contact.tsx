@@ -28,12 +28,12 @@ export function Contact() {
             <div className="contact__glow" />
             <div className="contact__avail">
               <span className="contact__avail-dot" />
-              OPEN TO SENIOR QA / SDET / AUTOMATION ROLES
+              CURRENTLY SDET · HYDERABAD, INDIA
             </div>
             <p className="contact__intro">
-              Senior Associate QA Engineer — 3.5 years across live real-money gaming and
-              enterprise software, 1.5 of them fully remote. Manual and automation, mobile and
-              web. Remote, hybrid, or open to relocation.
+              Software Development Engineer in Test — 3.5+ years across test automation, API
+              and integration testing, and LLM-powered tooling. Always happy to talk
+              frameworks, testing strategy, or anything quality.
             </p>
             <Magnetic strength={0.15}>
               <a href={`mailto:${profile.email}`} className="contact__email">

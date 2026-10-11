@@ -84,25 +84,25 @@ export function Loading({ onDone }: Props) {
 
           <div className="loader__marquee">
             <Marquee speed={60} gradient={false}>
-              <span>SENIOR QA ENGINEER</span>
+              <span>SDET</span>
               <span className="loader__diamond">◆</span>
-              <span>iGAMING SPECIALIST</span>
+              <span>TEST AUTOMATION</span>
               <span className="loader__diamond">◆</span>
-              <span>AUTOMATION-FIRST</span>
+              <span>API &amp; INTEGRATION</span>
               <span className="loader__diamond">◆</span>
-              <span>ISTQB CERTIFIED</span>
-              <span className="loader__diamond">◆</span>
-              <span>AI-ASSISTED TESTING</span>
-              <span className="loader__diamond">◆</span>
-              <span>SENIOR QA ENGINEER</span>
-              <span className="loader__diamond">◆</span>
-              <span>iGAMING SPECIALIST</span>
-              <span className="loader__diamond">◆</span>
-              <span>AUTOMATION-FIRST</span>
+              <span>LLM EVALUATION</span>
               <span className="loader__diamond">◆</span>
               <span>ISTQB CERTIFIED</span>
               <span className="loader__diamond">◆</span>
-              <span>AI-ASSISTED TESTING</span>
+              <span>SDET</span>
+              <span className="loader__diamond">◆</span>
+              <span>TEST AUTOMATION</span>
+              <span className="loader__diamond">◆</span>
+              <span>API &amp; INTEGRATION</span>
+              <span className="loader__diamond">◆</span>
+              <span>LLM EVALUATION</span>
+              <span className="loader__diamond">◆</span>
+              <span>ISTQB CERTIFIED</span>
               <span className="loader__diamond">◆</span>
             </Marquee>
           </div>

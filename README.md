@@ -1,10 +1,10 @@
 # Pundalik Mhamal — QA Engineer Portfolio
 
-Personal portfolio site for **Pundalik Mhamal**, Senior Associate QA Engineer at Light & Wonder.
+Personal portfolio site for **Pundalik Mhamal**, Software Development Engineer in Test (SDET).
 
-iGaming · Manual & Automation · Mobile & Web · ISTQB CTFL Certified.
+Test Automation · API & Integration · GenAI Evaluation · ISTQB CTFL Certified.
 
-3.5 years across live, real-money gaming platforms and enterprise software — 1.5 of them fully remote.
+3.5+ years building test automation — frameworks in Playwright + TypeScript and Python + Selenium, CI build gates, and LLM-powered tooling.
 
 🌐 **Live:** [iampundalikportfolio.netlify.app](https://iampundalikportfolio.netlify.app/)
 
@@ -25,9 +25,11 @@ No backend. Static site, deployable to any host (Vercel, Netlify, GitHub Pages, 
 - **Animated background** — canvas particles, ambient orbs, mouse-reactive
 - **Parallax scroll layers** — code blocks, terminals, and dashboards drift behind content at different speeds
 - **Custom cursor** — spring-tracked ring (auto-disabled on touch)
-- **Bento skills grid** — 9 expertise cards with mixed spans
-- **Experience timeline** — Light & Wonder + Claysys Technologies, accent-coded
-- **Tech stack** — 6 resume-backed categories (Selenium, Cucumber/Gherkin, Python, Allure, Android/iOS, BrowserStack, Jenkins, Azure DevOps, SQL/SSMS, Spring Boot, Gemini API, etc.) with proficiency dots
+- **Editorial hero + About** — oversized display type, a magnetic 3D object and word-by-word animated text
+- **Capabilities index** — an inverted light slab listing six numbered capabilities
+- **Experience timeline** — People Tech Technology, Light & Wonder and ClaySys Technologies
+- **Projects** — a sticky, scroll-scaled card stack (BetSettings, BugLogger, an autonomous AI pipeline, BDD suite, SwagLabs)
+- **Tech stack** — 7 resume-backed categories (Playwright, Selenium, TypeScript, Python, REST/SOAP, Gemini API, LLM evaluation, Jenkins, AWS, etc.) with proficiency dots
 - **QA Lab gallery** — scrolling marquee of Allure reports, dashboards, browser sessions, terminals, and AI defect-intake mockups
 - **Mobile-first responsive** — verified at 360px through 1440px
 - **Accessible** — WCAG AA contrast throughout, skip link, visible focus rings, full `prefers-reduced-motion` support
@@ -62,12 +64,16 @@ src/
     ├── Cursor.tsx             # custom cursor
     ├── ScrollProgress.tsx     # top progress bar
     ├── Nav.tsx                # sticky nav with mobile sheet
-    ├── Hero.tsx               # full name + intro + CTAs + metrics
-    ├── Marquee.tsx            # tools ticker
-    ├── Skills.tsx             # bento grid
+    ├── Hero.tsx               # oversized heading + magnetic 3D object
+    ├── About.tsx              # animated intro + metrics
+    ├── Marquee.tsx            # scroll-driven stat / word / mockup tiles
+    ├── Skills.tsx             # numbered capabilities slab
+    ├── Decor.tsx              # 3D decor objects (SVG)
+    ├── AnimatedText.tsx       # word-by-word text reveal
+    ├── FadeIn.tsx             # in-view fade + offset helper
     ├── Experience.tsx         # work timeline
     ├── Stack.tsx              # tech stack categories
-    ├── Projects.tsx           # featured projects with QA media
+    ├── Projects.tsx           # sticky project card stack
     ├── QALab.tsx              # scrolling QA artefact gallery
     ├── QAMockups.tsx          # SVG components (test report, browser, terminal, dashboard, AI)
     ├── Certs.tsx              # certifications + education
@@ -99,8 +105,8 @@ For Vercel/Netlify, point the project at this repo — they auto-detect Vite.
 - **LinkedIn** — [linkedin.com/in/iampundalik](https://linkedin.com/in/iampundalik)
 - **GitHub** — [github.com/Iampundalik](https://github.com/Iampundalik)
 - **Phone** — +91 98907 03905
-- **Location** — Goa, India · IST (UTC+5:30) · Remote / Hybrid / Open to relocation
+- **Location** — Hyderabad, India · IST (UTC+5:30)
 
 ---
 
-Open to **QA / SDET / Automation** roles.
+SDET · Test Automation · GenAI Evaluation.

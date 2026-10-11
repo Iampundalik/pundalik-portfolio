@@ -6,7 +6,7 @@ import { metrics, profile } from '../data/portfolio';
 import './About.css';
 
 const BLURB =
-  "Three and a half years testing live, real-money gaming platforms and enterprise software — a year and a half of it fully remote. Manual and automation, mobile and web, from spec review through production release. If it can break in front of a player, I want to find it first.";
+  "Three and a half years building test automation and owning quality — most recently on a GLI-regulated, real-money casino platform, and now as an SDET in Hyderabad. I build frameworks from scratch in Playwright + TypeScript and Python + Selenium, run them in CI as build gates, and have shipped an LLM-powered service of my own. If it can break in front of a user, I want to find it first.";
 
 export function About() {
   return (

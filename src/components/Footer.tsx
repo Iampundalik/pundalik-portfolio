@@ -5,9 +5,9 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footer__l">
-        © {new Date().getFullYear()} Pundalik Mhamal · Senior Associate QA Engineer · Goa, India
+        © {new Date().getFullYear()} Pundalik Mhamal · Software Development Engineer in Test
         <br />
-        IST (UTC+5:30) · Remote / Hybrid / Open to Relocation
+        {profile.location}
       </div>
       <div className="footer__r">{profile.initials}.QA</div>
     </footer>

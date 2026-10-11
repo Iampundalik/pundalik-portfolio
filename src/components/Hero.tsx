@@ -29,7 +29,7 @@ export function Hero() {
         <div className="hero__bar">
           <FadeIn delay={0.35} y={20}>
             <p className="hero__blurb">
-              a qa engineer driven by shipping software that holds up under real money
+              an sdet who builds test frameworks that catch the bug before your users do
             </p>
           </FadeIn>
 

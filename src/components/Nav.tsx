@@ -51,7 +51,7 @@ export function Nav() {
 
         <Magnetic strength={0.2}>
           <a href={`mailto:${profile.email}`} className="nav__hire">
-            HIRE <ArrowUpRight size={14} strokeWidth={2.5} />
+            CONTACT <ArrowUpRight size={14} strokeWidth={2.5} />
           </a>
         </Magnetic>
 

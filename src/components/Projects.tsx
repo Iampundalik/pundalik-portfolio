@@ -67,7 +67,7 @@ function Card({
               rel="noopener noreferrer"
               className="pill pill--ghost proj__cta"
             >
-              Live Project <ArrowUpRight size={14} strokeWidth={2.4} />
+              View Source <ArrowUpRight size={14} strokeWidth={2.4} />
             </a>
           ) : (
             <span className="pill pill--ghost proj__cta proj__cta--locked">

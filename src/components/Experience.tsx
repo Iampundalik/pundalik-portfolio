@@ -13,7 +13,7 @@ export function Experience() {
         label="02 EXPERIENCE"
         line1="WORK"
         line2="HISTORY"
-        sub="Promoted at a global iGaming leader. 3.5 years across live casino game platforms and enterprise RPA — 1.5 of them fully remote."
+        sub="Now an SDET. Before that, promoted at a global iGaming leader — 3.5+ years across real-money casino platforms and enterprise RPA."
       />
 
       <div className="exp">

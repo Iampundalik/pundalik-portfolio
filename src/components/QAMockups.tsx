@@ -137,17 +137,17 @@ export function MockBrowser() {
 
 export function MockTerminal() {
   const lines = [
-    { c: C.green, t: '$ pytest tests/scrapers/flipkart_test.py -v' },
-    { c: C.dim2, t: 'collected 24 items' },
-    { c: C.green, t: 'tests/scrapers/flipkart_test.py::test_init_session PASSED' },
-    { c: C.green, t: 'tests/scrapers/flipkart_test.py::test_search_query PASSED' },
-    { c: C.green, t: 'tests/scrapers/flipkart_test.py::test_paginate PASSED' },
-    { c: C.green, t: 'tests/scrapers/flipkart_test.py::test_extract_price PASSED' },
-    { c: C.orange, t: 'tests/scrapers/flipkart_test.py::test_anti_bot SKIPPED' },
-    { c: C.green, t: 'tests/scrapers/flipkart_test.py::test_json_export PASSED' },
-    { c: C.dim2, t: '──────────── 23 passed, 1 skipped in 18.42s ────────────' },
-    { c: C.blue, t: '$ python -m scrapy.cli export --format json --out products.json' },
-    { c: C.dim2, t: '✓ 1,247 records → products.json (842 KB)' },
+    { c: C.green, t: '$ npx playwright test bet-settings --workers=4' },
+    { c: C.dim2, t: 'Running 6 checks using 4 workers' },
+    { c: C.green, t: '  ✓ EUR   default 1.00    min 0.20   max 100.00    match' },
+    { c: C.green, t: '  ✓ USD   default 1.00    min 0.20   max 100.00    match' },
+    { c: C.green, t: '  ✓ SEK   default 10.00   min 2.00   max 1000.00   match' },
+    { c: C.green, t: '  ✓ ZAR   default 20.00   min 4.00   max 2000.00   match' },
+    { c: C.green, t: '  ✓ AED   default 4.00    min 0.80   max 400.00    match' },
+    { c: C.orange, t: '  ✗ GBP   max: config 50.00 ≠ live 100.00     MISMATCH' },
+    { c: C.dim2, t: '──────────── 5 passed · 1 flagged · 12.4s ────────────' },
+    { c: C.blue, t: '$ open reports/index.html' },
+    { c: C.dim2, t: '✓ HTML + Allure report written, JSON evidence attached' },
     { c: C.green, t: '$ _' },
   ];
   return (
@@ -244,7 +244,7 @@ export function MockAI() {
         </linearGradient>
       </defs>
       <rect width="600" height="380" fill={C.bg} rx="6" />
-      <WindowChrome title="AI Defect-Intake — Gemini → Jira REST v2" />
+      <WindowChrome title="BugLogger — Gemini → Jira REST API" />
 
       {/* Prompt panel */}
       <g transform="translate(20, 46)">
