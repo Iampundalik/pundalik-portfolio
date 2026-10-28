@@ -23,7 +23,7 @@ export function Hero() {
         <div className="hero__headline">
           <FadeIn delay={0.05} y={16}>
             <p className="hero__role">
-              SDET @ Amazon <span className="hero__role-via">(Quest Global)</span>
+              SDET @ Amazon
             </p>
           </FadeIn>
           <FadeIn delay={0.15} y={40}>

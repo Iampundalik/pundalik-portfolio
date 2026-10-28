@@ -2,7 +2,7 @@ export const profile = {
   name: 'PUNDALIK MHAMAL',
   initials: 'PM',
   role: 'SDET',
-  company: 'Amazon (Quest Global)',
+  company: 'Amazon',
   tagline: 'Test Automation · API & Integration · GenAI Evaluation',
   email: 'pundalik.mhamal.work@gmail.com',
   phone: '+91 98907 03905',
@@ -111,10 +111,10 @@ export const experience = [
   {
     period: 'Oct 2026 – Present',
     badges: [{ label: 'CURRENT', tone: 'live' as const }],
-    company: 'Amazon (Quest Global)',
+    company: 'Amazon',
     role: 'SDET — Software Development Engineer in Test · Hyderabad',
     bullets: [
-      'SDET with an Amazon engineering team since October 2026, through Quest Global.',
+      'SDET with an Amazon engineering team since October 2026.',
       'Focus areas: test automation frameworks, API and integration testing, and quality gates in CI.',
     ],
     foot: 'SDET @ Amazon · Test Automation · API & Integration · CI Quality Gates',

@@ -43,10 +43,6 @@
   border-radius: 2px;
   background: var(--accent);
 }
-.hero__role-via {
-  color: var(--dim2);
-  font-weight: 500;
-}
 
 .hero__h1 {
   font-size: clamp(2.2rem, 10.4vw, 15rem);

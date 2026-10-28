@@ -28,10 +28,10 @@ export function Contact() {
             <div className="contact__glow" />
             <div className="contact__avail">
               <span className="contact__avail-dot" />
-              SDET @ AMAZON (QUEST GLOBAL) · HYDERABAD
+              SDET @ AMAZON · HYDERABAD
             </div>
             <p className="contact__intro">
-              SDET @ Amazon (Quest Global) — 3.5+ years across test automation, API
+              SDET @ Amazon — 3.5+ years across test automation, API
               and integration testing, and LLM-powered tooling. Always happy to talk
               frameworks, testing strategy, or anything quality.
             </p>
